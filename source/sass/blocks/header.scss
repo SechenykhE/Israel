@@ -1,0 +1,161 @@
+.header {
+  background-color: $second-color;
+  background-image: url("../img/girl-desktop@1x.png"), url("../img/israel-desktop@1x.png"), url("../img/header-bg-desktop@1x.png");
+  background-position: center top, center 160px, center top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, 74.5% auto, cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl-desktop@2x.png"), url("../img/israel-desktop@2x.png"), url("../img/header-bg-desktop@2x.png");
+  }
+}
+
+.header__top {
+  position: relative;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header__call {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__call a {
+  @include text(15px, 1.2, 500);
+  @include animation;
+
+  padding-top: 16px;
+
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    @include animation;
+    @include cursor-hover;
+
+    color: $text-color-hover;
+  }
+
+  &:active {
+    @include animation;
+
+    color: $text-color-active;
+  }
+}
+
+.header__call .header__call-order {
+  padding-right: 4px;
+  font-variant: small-caps;
+  border-bottom: 1px dashed $text-color;
+}
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__main {
+  max-width: 343px;
+  margin: 0 auto;
+  padding-top: 38.5%;
+  padding-bottom: 10.4%;
+}
+
+.header__main p {
+  @include reset;
+  @include text(24px, 1.21, 700);
+
+  margin-bottom: 31px;
+
+  color: $second-color;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.header__main button {
+  @include animation;
+
+  display: block;
+  width: 76px;
+  height: 132px;
+  margin: 0 auto;
+
+  border: none;
+  background: url("../img/scroll-down@1x.png");
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    @include animation;
+    @include cursor-hover;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/scroll-down@2x.png");
+    background-size: 76px 132px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .header {
+    background-image: url("../img/girl-mobile@1x.png"), url("../img/israel-mobile@1x.png"), url("../img/header-bg-mobile@1x.png");
+    background-position: center 32px, center 168px, center 32px;
+    background-size: cover, 100.2% auto, cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl-mobile@2x.png"), url("../img/israel-mobile@2x.png"), url("../img/header-bg-mobile@2x.png");
+    }
+  }
+
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header__logo {
+    position: static;
+    flex-shrink: 0;
+    transform: translateX(0);
+  }
+
+  .header__logo img {
+    width: 120px;
+    height: 42px;
+  }
+
+  .header__call {
+    flex-direction: column;
+    align-items: flex-end;
+    width: 45%;
+    margin-right: -2.5%;
+  }
+
+  .header__call a {
+    @include text(14px, 1.2, 500);
+    padding-top: 0;
+  }
+
+  .header__call .header__call-order {
+    padding-right: 0;
+  }
+
+  .header__main {
+    padding-top: 88%;
+    padding-bottom: 10.4%;
+  }
+
+  .header__main p {
+    @include text(20px, 1.2, 700);
+  }
+}

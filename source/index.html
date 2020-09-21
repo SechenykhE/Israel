@@ -14,15 +14,71 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <header>
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <a class="header__logo">
+            <picture>
+              <!-- 1x: 120px 2x: 240px -->
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/logo-header-mobile@1x.webp 1x, img/logo-header-mobile@2x.webp 2x">
+              <!-- 1x: 137px 2x: 274px -->
+              <source type="image/webp" srcset="img/logo-header-desktop@1x.webp 1x, img/logo-header-desktop@2x.webp 2x" >
 
+              <img src="img/logo-header-desktop@1x.png" srcset=" img/logo-header-desktop@1x.png 1x, img/logo-header-desktop@2x.png 2x" width="137" height="48" alt="Логотип Маса">
+            </picture>
+          </a>
+          <div class="header__call">
+            <a href="tel:897226216581">+ (972) 2 – 621 – 6581</a>
+            <a class="header__call-order" href="#">заказать звонок</a>
+          </div>
+        </div>
+
+        <div class="header__main">
+          <h1 class="visually-hidden">Учёба и путешествие в Израиль</h1>
+          <p>Учёба, путешествие и карьера для еврейской молодёжи</p>
+          <button type="button">
+            <span class="visually-hidden">перейти вниз</span>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main></main>
+    <main>
+      <section class="about-program">
+        <div class="about-program__inner container">
+          <h2>О программе</h2>
+          <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+          <div>
+            <button type="button"></button>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer></footer>
 
-    <!--<script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>-->
+    <section class="modal">
+      <div class="modal__wrapper modal-order">
+        <h2>Заказать звонок</h2>
+        <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+        <form class="modal-order__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="input-name">Ваше имя:</label>
+          <input class="modal-order__input modal-order__input--success" id="input-name" type="text" name="user-name" placeholder="Имя" required>
+          <label class="visually-hidden" for="input-phone">Ваш телефон</label>
+          <input class="modal-order__input modal-order__input--error" id="input-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
+
+          <button class="button" type="submit">перезвоните мне</button>
+
+          <div class="modal-order__check">
+            <input class="visually-hidden" id="check" type="checkbox" required>
+            <label for="check">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
+          </div>
+        </form>
+        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+    </section>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

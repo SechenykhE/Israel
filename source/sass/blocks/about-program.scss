@@ -1,0 +1,16 @@
+.about-program__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 15px;
+}
+
+.about-program h2 {
+  @include reset;
+  @include title-desktop;
+}
+
+.about-program p {
+  @include text(17px, 1.7, 400);
+}

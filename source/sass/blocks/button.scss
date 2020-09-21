@@ -1,0 +1,26 @@
+.button {
+  @include text(17px, 1.18, 500);
+  @include animation;
+
+  width: 216px;
+  height: 59px;
+
+  font-variant: small-caps;
+  color: $second-color;
+
+  background: $gradient;
+  border: none;
+  border-radius: 80px;
+
+  &:hover,
+  &:focus {
+    @include animation;
+    @include cursor-hover;
+
+    background: $gradient-hover;
+  }
+
+  &:active {
+    background: $gradient-active;
+  }
+}
