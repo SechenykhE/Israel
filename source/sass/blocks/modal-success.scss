@@ -1,0 +1,81 @@
+.modal-success {
+  padding-top: 216px;
+  padding-right: 60px;
+  padding-bottom: 112px;
+  padding-left: 60px;
+
+  text-align: center;
+}
+
+.modal-success h2 {
+  @include reset;
+  @include text(28px, 1.21, 700);
+
+  position: relative;
+  margin-bottom: 16px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: $first-color;
+  letter-spacing: -0.02em;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -97px;
+    left: 146px;
+
+    width: 71px;
+    height: 64px;
+
+    background: url("../img/modal-ok@1x.png");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/modal-ok@2x.png");
+      background-size: 71px 64px;
+    }
+  }
+}
+
+.modal-success p {
+  @include reset;
+  @include text(15px, 1.73, 400);
+
+  margin-bottom: 32px;
+  color: rgba($text-color, 0.87);
+}
+
+.modal-success .button {
+  width: 264px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 19px;
+}
+
+@media (max-width: $mobile-width-max) {
+  .modal-success {
+    padding-top: 296px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 292px;
+  }
+
+  .modal-success h2 {
+    @include text(24px, 1.21, 700);
+
+    text-align: center;
+
+    &::before {
+      top: -96px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .modal-success p {
+    @include text(14px, 1.6, 400);
+
+    margin-bottom: 31px;
+    text-align: center;
+  }
+}

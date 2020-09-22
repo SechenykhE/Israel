@@ -57,15 +57,15 @@
 
     <footer></footer>
 
-    <section class="modal">
+    <section class="modal modal--close js-order">
       <div class="modal__wrapper modal-order">
         <h2>Заказать звонок</h2>
         <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
         <form class="modal-order__form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="input-name">Ваше имя:</label>
-          <input class="modal-order__input modal-order__input--success" id="input-name" type="text" name="user-name" placeholder="Имя" required>
+          <input class="modal-order__input" id="input-name" type="text" name="user-name" placeholder="Имя" required>
           <label class="visually-hidden" for="input-phone">Ваш телефон</label>
-          <input class="modal-order__input modal-order__input--error" id="input-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
+          <input class="modal-order__input" id="input-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
 
           <button class="button" type="submit">перезвоните мне</button>
 
@@ -74,6 +74,15 @@
             <label for="check">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
           </div>
         </form>
+        <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
+    </section>
+
+    <section class="modal modal--close js-success">
+      <div class="modal__wrapper modal-success">
+        <h2>Заявка принята</h2>
+        <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+        <div class="button" type="button">Понятно</div>
         <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
       </div>
     </section>

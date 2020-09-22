@@ -11,7 +11,9 @@
   background: $gradient;
   border: none;
   border-radius: 80px;
+}
 
+button.button {
   &:hover,
   &:focus {
     @include animation;
