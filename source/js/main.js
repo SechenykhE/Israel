@@ -45,6 +45,7 @@
     buttonCloseOrder.removeEventListener('click', onButtonClick);
     buttonCloseSuccess.removeEventListener('click', onButtonClick);
     modal.removeEventListener('mousedown', onDocumentMousedownPress);
+    body.classList.remove('hidden');
   };
 
   var closeOpenedModal = function () {
@@ -108,6 +109,25 @@
 
   });
 
+  // tabs
+
+  var program = document.querySelector('.programs');
+  var programsButtons = program.querySelectorAll('.programs__item');
+  var programsTexts = program.querySelectorAll('.programs__text');
+
+  var switchTabs = function (tabs, i, classActive) {
+    tabs.forEach(function (item) {
+      item.classList.remove(classActive);
+    });
+    tabs[i].classList.add(classActive);
+  };
+
+  programsButtons.forEach(function (button, i) {
+    button.addEventListener('click', function () {
+      switchTabs(programsButtons, i, 'programs__item--active');
+      switchTabs(programsTexts, i, 'programs__text--active');
+    });
+  });
 
   window.vendor.svg4everybody();
 })();

@@ -6,6 +6,10 @@
   padding: 0 8.1%;
 }
 
+.container--about-program {
+  padding: 0 18.1%;
+}
+
 /*@media (max-width: $tablet-width-max) {
   .container {
     padding: 0 5.9%;
@@ -14,6 +18,10 @@
 
 @media (max-width: $mobile-width-max) {
   .container {
+    padding: 0 5%;
+  }
+
+  .container--about-program {
     padding: 0 5%;
   }
 }

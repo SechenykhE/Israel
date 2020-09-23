@@ -405,6 +405,9 @@ img {
   margin: 0 auto;
   padding: 0 8.1%; }
 
+.container--about-program {
+  padding: 0 18.1%; }
+
 /*@media (max-width: $tablet-width-max) {
   .container {
     padding: 0 5.9%;
@@ -412,6 +415,8 @@ img {
 }*/
 @media (max-width: 767px) {
   .container {
+    padding: 0 5%; }
+  .container--about-program {
     padding: 0 5%; } }
 
 .button {
@@ -508,7 +513,7 @@ button.button:active {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   text-align: center; }
 
-.header__main button {
+.header__main a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: block;
@@ -518,14 +523,14 @@ button.button:active {
   border: none;
   background: url("../img/scroll-down@1x.png");
   background-repeat: no-repeat; }
-  .header__main button:hover, .header__main button:focus {
+  .header__main a:hover, .header__main a:focus {
     -webkit-transition: 0.3s;
     transition: 0.3s;
     cursor: url("../img/pointer-hand.svg"), pointer; }
-  .header__main button:active {
+  .header__main a:active {
     opacity: 0.7; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .header__main button {
+    .header__main a {
       background: url("../img/scroll-down@2x.png");
       background-size: 76px 132px; } }
 
@@ -582,6 +587,18 @@ button.button:active {
     line-height: 1.2;
     font-weight: 700; } }
 
+.about-program {
+  background-image: url("../img/about_bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 175px;
+  background-size: 100%; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .about-program {
+      background: url("../img/about_bg-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: center 175px;
+      background-size: 100%; } }
+
 .about-program__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,7 +610,8 @@ button.button:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 15px; }
+  padding-top: 15px;
+  padding-bottom: 100px; }
 
 .about-program h2 {
   margin: 0;
@@ -605,12 +623,533 @@ button.button:active {
   font-weight: 700;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: #1fc0fc; }
+  color: #1fc0fc;
+  max-width: 100%;
+  margin-bottom: 24px; }
 
 .about-program p {
   font-size: 17px;
   line-height: 1.7;
-  font-weight: 400; }
+  font-weight: 400;
+  max-width: 100%;
+  padding: 0 75px;
+  margin-bottom: 48px;
+  text-align: center; }
+
+.about-program__img {
+  position: relative; }
+
+.about-program__play {
+  cursor: url("../img/pointer-hand.svg"), pointer;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-49%);
+          transform: translateX(-50%) translateY(-49%);
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%; }
+  .about-program__play::before, .about-program__play::after {
+    position: absolute;
+    content: ""; }
+  .about-program__play::before {
+    z-index: 3;
+    top: 23px;
+    left: 27px;
+    width: 15px;
+    height: 19px;
+    background: url("../../img/icon-triangle.svg"); }
+  .about-program__play::after {
+    z-index: 1;
+    top: -15px;
+    left: -16px;
+    width: 96px;
+    height: 96px;
+    background: #ffffff;
+    opacity: 0.32;
+    border-radius: 50%; }
+
+.about-program__play:hover,
+.about-program__play:focus {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }
+  .about-program__play:hover::before,
+  .about-program__play:focus::before {
+    opacity: 0.7; }
+
+.about-program__play:active {
+  background: #f4f4f4; }
+  .about-program__play:active::before {
+    opacity: 1; }
+
+@media (max-width: 767px) {
+  .about-program {
+    background-image: url("../img/about_bg-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center 256px;
+    background-size: 100%; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .about-program {
+      background: url("../img/about_bg-mobile@2x.png");
+      background-repeat: no-repeat;
+      background-position: center 256px;
+      background-size: 100%; } }
+
+@media (max-width: 767px) {
+  .about-program__inner {
+    padding-top: 56px;
+    padding-bottom: 56px; }
+  .about-program h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    line-height: 1.22;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #1fc0fc;
+    margin-bottom: 24px; }
+  .about-program p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    padding: 0;
+    margin-bottom: 50px;
+    text-align: left; }
+  .about-program__img {
+    width: 111%; }
+  .about-program__play {
+    top: 94px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 2;
+    width: 53.3px;
+    height: 53.3px;
+    background: #ffffff;
+    border: none;
+    border-radius: 50%; }
+    .about-program__play::before, .about-program__play::after {
+      position: absolute;
+      content: ""; }
+    .about-program__play::before {
+      z-index: 3;
+      top: 17px;
+      left: 22px;
+      width: 14px;
+      height: 17px;
+      background: url("../../img/icon-triangle.svg"); }
+    .about-program__play::after {
+      z-index: 1;
+      top: -13px;
+      left: -13px;
+      width: 80px;
+      height: 80px;
+      background: #ffffff;
+      opacity: 0.32;
+      border-radius: 50%; } }
+
+.programs {
+  background-image: url("../img/programs-bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: right 51px;
+  background-size: auto; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs {
+      background: url("../img/programs-bg-desktop@2x.png");
+      background-repeat: no-repeat;
+      background-position: right 51px;
+      background-size: 50%; } }
+
+.programs__inner {
+  padding-top: 100px;
+  padding-right: 8.1%;
+  padding-bottom: 100px;
+  padding-left: 15.4%; }
+
+.programs__inner h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 1.23;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1fc0fc;
+  margin-bottom: 65px; }
+
+.programs__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.programs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: 64px; }
+
+.programs__item {
+  position: relative;
+  z-index: 2;
+  width: 228px;
+  height: 72px; }
+
+.programs__item--general::before,
+.programs__item--academy::before,
+.programs__item--intern::before,
+.programs__item--volunteer::before,
+.programs__item--religion::before {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 36px;
+  height: 36px; }
+
+.programs__item--general::before {
+  top: 20px;
+  left: 24px;
+  background: url("../img/icon-start-black@1x.png");
+  background-size: 28px 33px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--general::before {
+      background: url("../img/icon-start-black@2x.png");
+      background-size: 28px 33px;
+      background-repeat: no-repeat; } }
+
+.programs__item:hover.programs__item--general::before,
+.programs__item:focus.programs__item--general::before {
+  background: url("../img/icon-star-yellow@1x.png");
+  background-size: 28px 33px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item:hover.programs__item--general::before,
+    .programs__item:focus.programs__item--general::before {
+      background: url("../img/icon-star-yellow@2x.png");
+      background-size: 28px 33px;
+      background-repeat: no-repeat; } }
+
+.programs__item--active.programs__item--general::before {
+  background: url("../img/icon-star-white@1x.png");
+  background-size: 28px 33px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--general::before {
+      background: url("../img/icon-star-white@2x.png");
+      background-size: 28px 33px;
+      background-repeat: no-repeat; } }
+
+.programs__item--academy::before {
+  top: 20px;
+  left: 20px;
+  background: url("../img/icon-hat-black@1x.png");
+  background-size: 36px 33px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--academy::before {
+      background: url("../img/icon-hat-black@2x.png");
+      background-size: 37px 32px;
+      background-repeat: no-repeat; } }
+
+.programs__item:hover.programs__item--academy::before,
+.programs__item:focus.programs__item--academy::before {
+  background: url("../img/icon-hat-yellow@1x.png");
+  background-size: 36px 33px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item:hover.programs__item--academy::before,
+    .programs__item:focus.programs__item--academy::before {
+      background: url("../img/icon-hat-yellow@2x.png");
+      background-size: 37px 32px;
+      background-repeat: no-repeat; } }
+
+.programs__item--active.programs__item--academy::before {
+  background: url("../img/icon-hat-white@1x.png");
+  background-size: 36px 33px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--academy::before {
+      background: url("../img/icon-hat-white@2x.png");
+      background-size: 37px 32px;
+      background-repeat: no-repeat; } }
+
+.programs__item--intern::before {
+  top: 23px;
+  left: 22px;
+  background: url("../img/icon-bag-black@1x.png");
+  background-size: 32px 25px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--intern::before {
+      background: url("../img/icon-bag-black@2x.png");
+      background-size: 32px 25px;
+      background-repeat: no-repeat; } }
+
+.programs__item:hover.programs__item--intern::before,
+.programs__item:focus.programs__item--intern::before {
+  background: url("../img/icon-bag-yellow@1x.png");
+  background-size: 32px 25px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item:hover.programs__item--intern::before,
+    .programs__item:focus.programs__item--intern::before {
+      background: url("../img/icon-bag-yellow@2x.png");
+      background-size: 32px 25px;
+      background-repeat: no-repeat; } }
+
+.programs__item--active.programs__item--intern::before {
+  background: url("../img/icon-bag-white@1x.png");
+  background-size: 32px 25px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--intern::before {
+      background: url("../img/icon-bag-white@2x.png");
+      background-size: 32px 25px;
+      background-repeat: no-repeat; } }
+
+.programs__item--volunteer::before {
+  top: 21px;
+  left: 22px;
+  background: url("../img/icon-hand-black@1x.png");
+  background-size: 32px 29px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--volunteer::before {
+      background: url("../img/icon-hand-black@2x.png");
+      background-size: 32px 29px;
+      background-repeat: no-repeat; } }
+
+.programs__item:hover.programs__item--volunteer::before,
+.programs__item:focus.programs__item--volunteer::before {
+  background: url("../img/icon-hand-yellow@1x.png");
+  background-size: 32px 29px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item:hover.programs__item--volunteer::before,
+    .programs__item:focus.programs__item--volunteer::before {
+      background: url("../img/icon-hand-yellow@2x.png");
+      background-size: 32px 29px;
+      background-repeat: no-repeat; } }
+
+.programs__item--active.programs__item--volunteer::before {
+  background: url("../img/icon-hand-white@1x.png");
+  background-size: 32px 29px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--volunteer::before {
+      background: url("../img/icon-hand-white@2x.png");
+      background-size: 32px 29px;
+      background-repeat: no-repeat; } }
+
+.programs__item--religion::before {
+  top: 23px;
+  left: 26px;
+  background: url("../img/icon-minorah-black@1x.png");
+  background-size: 23px 25px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--religion::before {
+      background: url("../img/icon-minorah-black@2x.png");
+      background-size: 23px 25px;
+      background-repeat: no-repeat; } }
+
+.programs__item:hover.programs__item--religion::before,
+.programs__item:focus.programs__item--religion::before {
+  background: url("../img/icon-minorah-yellow@1x.png");
+  background-size: 23px 25px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item:hover.programs__item--religion::before,
+    .programs__item:focus.programs__item--religion::before {
+      background: url("../img/icon-minorah-yellow@2x.png");
+      background-size: 23px 25px;
+      background-repeat: no-repeat; } }
+
+.programs__item--active.programs__item--religion::before {
+  background: url("../img/icon-minorah-white@1x.png");
+  background-size: 23px 25px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--religion::before {
+      background: url("../img/icon-minorah-white@2x.png");
+      background-size: 23px 25px;
+      background-repeat: no-repeat; } }
+
+.programs__item:hover button,
+.programs__item:focus button {
+  color: #ffc341; }
+
+.programs__item.programs__item--active button {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-variant-caps: small-caps;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
+
+.programs__item--active::after {
+  position: absolute;
+  content: "";
+  z-index: -2;
+  top: 2px;
+  left: 0;
+  width: 228px;
+  height: 68px;
+  background: url("../../img/rectangle@1x.png");
+  background-repeat: no-repeat; }
+
+.programs__list button {
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  width: 228px;
+  height: 72px;
+  padding-left: 72px;
+  color: rgba(72, 72, 72, 0.87);
+  text-align: left;
+  border: none;
+  background: none; }
+
+.programs__text-wrapper {
+  width: 560px;
+  padding-top: 20px; }
+
+.programs__text-wrapper h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  line-height: 1.21;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  letter-spacing: -0.02em;
+  color: #1fc0fc; }
+
+.programs__text-wrapper p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 11px;
+  color: rgba(72, 72, 72, 0.87); }
+
+.programs__text {
+  display: none; }
+
+.programs__text--active {
+  display: block; }
+
+@media (max-width: 767px) {
+  .programs {
+    background-image: url("../img/programs-bg-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 142px;
+    background-size: auto; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .programs {
+      background: url("../img/programs-bg-mobile@2x.png");
+      background-repeat: no-repeat;
+      background-position: right 142px;
+      background-size: 93%; } }
+
+@media (max-width: 767px) {
+  .programs__inner {
+    padding-top: 26px;
+    padding-right: 5%;
+    padding-bottom: 100px;
+    padding-left: 5%; }
+  .programs__inner h2 {
+    font-size: 32px;
+    line-height: 1.22;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #1fc0fc;
+    text-align: center;
+    margin-bottom: 13px; }
+  .programs__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .programs__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    overflow: hidden; }
+  .programs__text-wrapper {
+    width: 100%;
+    padding-top: 34px; }
+  .programs__text-wrapper h3 {
+    font-size: 24px;
+    line-height: 1.21;
+    font-weight: 700;
+    margin-bottom: 16px; }
+  .programs__text-wrapper p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    width: 100%; }
+  .programs__item {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: auto;
+    height: 48px; }
+  .programs__item--general::before,
+  .programs__item--academy::before,
+  .programs__item--intern::before,
+  .programs__item--volunteer::before,
+  .programs__item--religion::before {
+    top: 12px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    background-size: 27px auto; }
+  .programs__item:hover.programs__item--general::before,
+  .programs__item:focus.programs__item--general::before,
+  .programs__item:hover.programs__item--academy::before,
+  .programs__item:focus.programs__item--academy::before,
+  .programs__item:hover.programs__item--intern::before,
+  .programs__item:focus.programs__item--intern::before,
+  .programs__item:hover.programs__item--volunteer::before,
+  .programs__item:focus.programs__item--volunteer::before,
+  .programs__item:hover.programs__item--religion::before,
+  .programs__item:focus.programs__item--religion::before,
+  .programs__item--active.programs__item--general::before,
+  .programs__item--active.programs__item--academy::before,
+  .programs__item--active.programs__item--intern::before,
+  .programs__item--active.programs__item--volunteer::before,
+  .programs__item--active.programs__item--religion::before {
+    background-size: 27px auto; }
+  .programs__list button {
+    width: auto;
+    height: 48px;
+    padding-left: 52px;
+    color: rgba(72, 72, 72, 0.87);
+    text-align: left;
+    border: none;
+    background: none; }
+  .programs__item.programs__item--active,
+  .programs__item.programs__item--active button {
+    width: 181px; }
+  .programs__item--active::after {
+    top: 2px;
+    left: 0;
+    width: 181px;
+    height: 48px;
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    background-repeat: no-repeat;
+    border-radius: 60px; } }
 
 .modal {
   position: fixed;

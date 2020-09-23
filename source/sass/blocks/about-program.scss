@@ -1,16 +1,191 @@
+.about-program {
+  background-image: url("../img/about_bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center 175px;
+  background-size: 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/about_bg-desktop@2x.png");
+    background-repeat: no-repeat;
+    background-position: center 175px;
+    background-size: 100%;
+  }
+}
+
 .about-program__inner {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   padding-top: 15px;
+  padding-bottom: 100px;
 }
 
 .about-program h2 {
   @include reset;
   @include title-desktop;
+
+  max-width: 100%;
+  margin-bottom: 24px;
 }
 
 .about-program p {
   @include text(17px, 1.7, 400);
+
+  max-width: 100%;
+  padding: 0 75px;
+  margin-bottom: 48px;
+
+  text-align: center;
+}
+
+.about-program__img {
+  position: relative;
+}
+
+.about-program__play {
+  @include cursor-hover;
+
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-49%);
+  z-index: 2;
+
+  width: 64px;
+  height: 64px;
+  background: $second-color;
+  border: none;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &::before {
+    z-index: 3;
+    top: 23px;
+    left: 27px;
+
+    width: 15px;
+    height: 19px;
+
+    background: url("../../img/icon-triangle.svg");
+  }
+
+  &::after {
+    z-index: 1;
+    top: -15px;
+    left: -16px;
+
+    width: 96px;
+    height: 96px;
+
+    background: $second-color;
+    opacity: 0.32;
+    border-radius: 50%;
+  }
+}
+
+.about-program__play:hover,
+.about-program__play:focus {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+  &::before {
+    opacity: 0.7;
+  }
+}
+
+.about-program__play:active {
+  background: #f4f4f4;
+
+  &::before {
+    opacity: 1;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .about-program {
+    background-image: url("../img/about_bg-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center 256px;
+    background-size: 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/about_bg-mobile@2x.png");
+      background-repeat: no-repeat;
+      background-position: center 256px;
+      background-size: 100%;
+    }
+  }
+
+  .about-program__inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .about-program h2 {
+    @include reset;
+    @include title-mobile;
+
+    margin-bottom: 24px;
+  }
+
+  .about-program p {
+    @include text(16px, 1.6, 400);
+
+    padding: 0;
+    margin-bottom: 50px;
+
+    text-align: left;
+  }
+
+  .about-program__img {
+    width: 111%;
+  }
+
+  .about-program__play {
+    top: 94px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    width: 53.3px;
+    height: 53.3px;
+    background: $second-color;
+    border: none;
+    border-radius: 50%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+
+    &::before {
+      z-index: 3;
+      top: 17px;
+      left: 22px;
+
+      width: 14px;
+      height: 17px;
+
+      background: url("../../img/icon-triangle.svg");
+    }
+
+    &::after {
+      z-index: 1;
+      top: -13px;
+      left: -13px;
+
+      width: 80px;
+      height: 80px;
+
+      background: $second-color;
+      opacity: 0.32;
+      border-radius: 50%;
+    }
+  }
 }
