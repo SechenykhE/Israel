@@ -1,0 +1,121 @@
+.want-go {
+  background-color: $second-color;
+  background-image: url("../img/backpack-desktop@1x.png");
+  background-position: left 87px;
+  background-repeat: no-repeat;
+  background-size: 10.9%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backpack-desktop@2x.png");
+  }
+}
+
+.want-go__inner {
+  padding-top: 162px;
+  padding-bottom: 130px;
+
+  background-image: url("../img/girl-flag-bg-desktop@1x.png");
+  background-position: right 97%;
+  background-repeat: no-repeat;
+  background-size: 59.9% auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/girl-flag-bg-desktop@2x.png");
+  }
+}
+
+.want-go__wrapper {
+  width: 477px;
+  padding-left: 8.6%;
+}
+
+.want-go__wrapper h2 {
+  @include reset;
+  @include title-desktop;
+
+  margin-bottom: 24px;
+}
+
+.want-go__wrapper p {
+  @include reset;
+  @include text(17px, 1.7, 400);
+
+  margin-bottom: 64px;
+
+  color: rgba($text-color, 0.87);
+}
+
+@media (max-width: 1100px) {
+  .want-go__inner {
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    background-size: 52% auto;
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .want-go {
+    background: none;
+  }
+
+  .want-go__inner {
+    padding-top: 0;
+    padding-bottom: 36%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 52% auto;
+  }
+
+  .want-go__wrapper {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .want-go {
+    background-image: url("../img/backpack-mobile@1x.png");
+    background-position: 0 19px;
+    background-repeat: no-repeat;
+    background-size: 103px auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/backpack-mobile@2x.png");
+    }
+  }
+
+  .want-go__inner {
+    padding-top: 68px;
+    padding-bottom: 96%;
+
+    background-image: url("../img/girl-flag-bg-mobile@1x.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/girl-flag-bg-mobile@2x.png");
+    }
+  }
+
+  .want-go__wrapper {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .want-go__wrapper h2 {
+    @include title-mobile;
+
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .want-go__wrapper p {
+    @include text(16px, 1.6, 400);
+
+    max-width: 500px;
+    margin-bottom: 23px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

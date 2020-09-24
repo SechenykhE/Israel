@@ -1,0 +1,71 @@
+.live-israel {
+  background-color: $second-color;
+  background-image: url("../img/watch@1x.png"), url("/../img/live-israel-bg-desktop@1x.png");
+  background-position: 100% 690px, 0 34px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 90px 147px, 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/watch@2x.png"), url("/../img/live-israel-bg-desktop@2x.png");
+  }
+}
+
+.live-israel__inner {
+  padding-top: 75px;
+}
+
+.live-israel h2 {
+  @include reset;
+  @include title-desktop;
+
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.live-israel p {
+  @include reset;
+  @include text(17px, 1.7, 400);
+
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: rgba($text-color, 0.87);
+  text-align: center;
+}
+
+.live-israel__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
+.live-israel__item--left {
+  width: 42.2%;
+  margin-right: 8px;
+}
+
+.live-israel__wrapper--right {
+  width: 56.3%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top: 67px;
+}
+
+.live-israel__item {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.live-israel__item p {
+  @include reset;
+  @include text(21px, 1.19, 800);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-family: "Raleway", "Arial", sans-serif;
+  color: $second-color;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}

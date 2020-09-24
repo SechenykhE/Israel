@@ -1,0 +1,160 @@
+.form input {
+  @include cursor-hover;
+  @include text(17px, 1.18, 500);
+  @include animation;
+
+  width: 100%;
+  height: 59px;
+  margin-bottom: 8px;
+  padding: 18px 38px;
+
+  font-variant: small-caps;
+
+  color: $text-color;
+  opacity: 0.87;
+  border: 2px solid #e3e3e3;
+  border-radius: 80px;
+
+  &::placeholder {
+    @include text(17px, 1.18, 500);
+
+    font-variant: small-caps;
+    color: $text-color;
+    opacity: 0.5;
+  }
+}
+
+.form__input:hover,
+.form__input:focus {
+  @include animation;
+
+  border: 2px solid transparent;
+  border-image: $gradient 1;
+  border-radius: 80px;
+}
+
+.form button {
+  width: 264px;
+  margin-top: 15px;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.form--error input:invalid {
+  border-color: $error-color;
+}
+
+.form--success input:valid {
+  border-color: $text-color;
+}
+
+.form__check {
+  position: relative;
+
+  margin-bottom: 33px;
+  margin-left: 60px;
+
+  text-align: left;
+}
+
+.form__check input,
+.form__check label {
+  @include cursor-hover;
+}
+
+.form__check input + label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid;
+  border-radius: 2px;
+  border-image: $gradient 1;
+}
+
+.form__check input:hover + label::before,
+.form__check input:focus + label::before {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.form__check label {
+  @include reset;
+  @include text(13px, 1.52, 400);
+
+  display: block;
+  width: 264px;
+  padding-left: 24px;
+  color: $text-color;
+}
+
+.form__check input:checked + label::after {
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  z-index: 2;
+
+  width: 18px;
+  height: 16px;
+
+  background: url("../../img/icon-check.svg");
+  background-repeat: no-repeat;
+}
+
+.form--want-go {
+  display: flex;
+  align-items: center;
+}
+
+.form--want-go input {
+  margin: 0;
+}
+
+.form--want-go button {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  width: 216px;
+  margin: 0;
+  margin-left: -38px;
+}
+
+@media (max-width: $mobile-width-max) {
+  .form button {
+    margin-top: 16px;
+    margin-left: 0;
+    margin-bottom: 16px;
+  }
+
+  .form__check {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 264px;
+    margin-bottom: 33px;
+    margin-left: 0;
+  }
+
+  .form--want-go {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form--want-go input {
+    width: 288px;
+    margin-bottom: 10px;
+  }
+
+  .form--want-go button {
+    position: relative;
+    width: 264px;
+    margin: 0;
+  }
+}

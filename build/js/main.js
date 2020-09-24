@@ -95,9 +95,9 @@
   modalsForm.addEventListener('submit', function (evt) {
     if (!userName.value || !userPhone.value) {
       evt.preventDefault();
-      modalsForm.classList.add('modal-order__form--error');
+      modalsForm.classList.add('form--error');
     } else {
-      modalsForm.classList.add('modal-order__form--success');
+      modalsForm.classList.add('form--success');
       if (isStorageSupport) {
         localStorage.setItem('userName', userName.value);
         localStorage.setItem('userPhone', userPhone.value);

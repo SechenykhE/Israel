@@ -1,7 +1,6 @@
 .container {
   width: 100%;
   max-width: 1366px;
-  min-width: 320px;
   margin: 0 auto;
   padding: 0 8.1%;
 }
@@ -10,11 +9,10 @@
   padding: 0 18.1%;
 }
 
-/*@media (max-width: $tablet-width-max) {
-  .container {
-    padding: 0 5.9%;
-  }
-}*/
+.container--live-israel {
+  padding: 0 7.6%;
+  padding-right: 8.8%;
+}
 
 @media (max-width: $mobile-width-max) {
   .container {

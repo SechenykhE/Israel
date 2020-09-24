@@ -43,7 +43,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="main">
       <section id="about-program" class="about-program">
         <div class="about-program__inner container container--about-program">
           <h2>О программе</h2>
@@ -73,7 +73,7 @@
               <li class="programs__item programs__item--academy programs__item--active">
                 <button>Академические</button>
               </li>
-              <li class="programs__item programs__item--intern">
+              <li class="programs__item programs__item--intern">тзь ыефке
                 <button>Стажировки</button>
               </li>
               <li class="programs__item programs__item--volunteer">
@@ -123,6 +123,115 @@
           </div>
         </div>
       </section>
+
+      <section class="want-go">
+        <div class="want-go__inner container">
+          <div class="want-go__wrapper">
+            <h2>Хочу поехать!</h2>
+            <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+            <form class="form form--want-go" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="want-go-phone">Ваш телефон</label>
+              <input class="form__input" id="want-go-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
+              <button class="button" type="submit">перезвоните мне</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-go">
+        <div class="how-go__inner container">
+          <div class="how-go__wrapper">
+            <h2>Как поехать</h2>
+            <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</p>
+            <h3>Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</h3>
+            <ol class="how-go__list">
+              <li>Быть в возрасте от 16 до 30 лет</li>
+              <li>Иметь оконченное среднее образование</li>
+              <li>Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
+              <li>За последние 2 года быть не больше 3х месяцев
+                подряд непрерывно в Израиле.</li>
+            </ol>
+            <p>Если вы не подходите по этим правилам, вы всё равно можете
+              принять участие в программе «Маса», оплатив её полную стоимость.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="live-israel">
+        <div class="live-israel__inner container container--live-israel">
+          <h2>Жизнь в израиле</h2>
+          <p>Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
+          <div class="live-israel__wrapper">
+            <div class="live-israel__item live-israel__item--left">
+              <p>Экскурсии по Израилю и знакомство с его историей</p>
+              <picture>
+                <!-- 1x: 288px 2x: 576px -->
+                <source type="image/webp" media="(max-width: 767px)" srcset="img/excursion-mobile@1x.webp 1x, img/excursion-mobile@2x.webp 2x">
+                <!-- 1x: 482px 2x: 964px -->
+                <source type="image/webp" srcset="img/excursion-desktop@1x.webp 1x, img/excursion-desktop@2x.webp 2x" >
+
+                <img src="img/excursion-desktop@1x.png" srcset=" img/excursion-desktop@1x.png 1x, img/excursion-desktop@2x.png 2x" width="482" height="732" alt="Экскурсия по Израилю">
+              </picture>
+            </div>
+            <div class="live-israel__wrapper live-israel__wrapper--right">
+              <div class="live-israel__item">
+                <p>Изучение иврита</p>
+                <picture>
+                  <!-- 1x: 288px 2x: 576px -->
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/study-mobile@1x.webp 1x, img/study-mobile@2x.webp 2x">
+                  <!-- 1x: 211px 2x: 422px -->
+                  <source type="image/webp" srcset="img/study-desktop@1x.webp 1x, img/study-desktop@2x.webp 2x" >
+
+                  <img src="img/study-desktop@1x.png" srcset=" img/study-desktop@1x.png 1x, img/study-desktop@2x.png 2x" width="211" height="318" alt="Мужчина изучает иврит">
+                </picture>
+              </div>
+              <div class="live-israel__item">
+                <p>Обучение современным навыкам и профессиям</p>
+                <picture>
+                  <!-- 1x: 288px 2x: 576px -->
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/teach-mobile@1x.webp 1x, img/teach-mobile@2x.webp 2x">
+                  <!-- 1x: 411px 2x: 822px -->
+                  <source type="image/webp" srcset="img/teach-desktop@1x.webp 1x, img/teach-desktop@2x.webp 2x" >
+
+                  <img src="img/teach-desktop@1x.png" srcset=" img/teach-desktop@1x.png 1x, img/teach-desktop@2x.png 2x" width="411" height="318" alt="Обучение">
+                </picture>
+              </div>
+              <div class="live-israel__item">
+                <p>Совместные творческие проекты с израильской молодёжью</p>
+                <picture>
+                  <!-- 1x: 288px 2x: 576px -->
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/together-mobile@1x.webp 1x, img/together-mobile@2x.webp 2x">
+                  <!-- 1x: 411px 2x: 822px -->
+                  <source type="image/webp" srcset="img/together-desktop@1x.webp 1x, img/together-desktop@2x.webp 2x" >
+
+                  <img src="img/together-desktop@1x.png" srcset=" img/together-desktop@1x.png 1x, img/together-desktop@2x.png 2x" width="411" height="318" alt="Совместные проекты">
+                </picture>
+              </div>
+              <div class="live-israel__item">
+                <p>Развитие лидерства</p>
+                <picture>
+                  <!-- 1x: 288px 2x: 576px -->
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/leader-mobile@1x.webp 1x, img/leader-mobile@2x.webp 2x">
+                  <!-- 1x: 214px 2x: 428px -->
+                  <source type="image/webp" srcset="img/leader-desktop@1x.webp 1x, img/leader-desktop@2x.webp 2x" >
+
+                  <img src="img/leader-desktop@1x.png" srcset=" img/leader-desktop@1x.png 1x, img/leader-desktop@2x.png 2x" width="214" height="318" alt="Развитие лидерских качеств">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="photo">
+        <div class="photo__inner container">
+          <div class="photo__wrapper">
+            <h2>#masaisrael</h2>
+            <p>Познакомьтесь с программой  от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.</p>
+            <a class="button" href="#">смотреть фото</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
@@ -131,15 +240,15 @@
       <div class="modal__wrapper modal-order">
         <h2>Заказать звонок</h2>
         <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
-        <form class="modal-order__form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="modal-order__form form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="input-name">Ваше имя:</label>
-          <input class="modal-order__input" id="input-name" type="text" name="user-name" placeholder="Имя" required>
+          <input class="form__input" id="input-name" type="text" name="user-name" placeholder="Имя" required>
           <label class="visually-hidden" for="input-phone">Ваш телефон</label>
-          <input class="modal-order__input" id="input-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
+          <input class="form__input" id="input-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
 
           <button class="button" type="submit">перезвоните мне</button>
 
-          <div class="modal-order__check">
+          <div class="form__check">
             <input class="visually-hidden" id="check" type="checkbox" required>
             <label for="check">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
           </div>
