@@ -1,19 +1,23 @@
 .photo {
   background-color: $second-color;
   background-image: url("../img/photo-bg-desktop@1x.png");
-  background-position: 0 160px;
+  background-position: 4px 108px;
   background-repeat: no-repeat;
   background-size: 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/photo-bg-desktop@2x.png");
+  }
 }
 
 .photo__inner {
-  padding-top: 280px;
+  padding-top: 229px;
   padding-bottom: 196px;
 }
 
 .photo__wrapper {
   width: 403px;
-  margin-right: 4.3%;
+  margin-right: 4.5%;
   margin-left: auto;
 }
 
@@ -22,13 +26,14 @@
   @include title-desktop;
 
   margin-bottom: 24px;
+  margin-left: -5px;
 }
 
 .photo p {
   @include reset;
   @include text(17px, 1.7, 400);
 
-  margin-bottom: 49px;
+  margin-bottom: 48px;
   color: $second-color;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 }
@@ -58,14 +63,14 @@
   .photo {
     background-color: $second-color;
     background-image: url("../img/photo-bg-mobile@1x.png");
-    background-position: 0 94px;
+    background-position: 0 62%;
     background-repeat: no-repeat;
     background-size: 100%;
   }
 
   .photo__inner {
-    padding-top: 50px;
-    padding-left: 3%;
+    padding-top: 22.5%;
+    padding-bottom: 0;
   }
 
   .photo__wrapper {
@@ -75,31 +80,27 @@
   }
 
   .photo h2 {
-    margin-bottom: 94px;
+    margin-bottom: 96px;
+    margin-left: -2.4%;
   }
 
   .photo p {
     @include text(16px, 1.6, 400);
 
-    margin-bottom: 49px;
+    margin-bottom: 59px;
+    padding-left: 2.6%;
+    padding-right: 2.6%;
   }
 
   .photo .button {
     width: 264px;
-    margin-left: 0;
-    padding: 20px;
-    padding-left: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 89px;
 
     &::before {
-      position: absolute;
-      content: "";
       top: 18px;
-      left: 38px;
-      width: 24px;
-      height: 24px;
-
-      background: url("../../img/icon-insta.svg");
-      background-repeat: no-repeat;
+      left: 57px;
     }
   }
 }

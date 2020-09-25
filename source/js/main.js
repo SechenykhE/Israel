@@ -129,5 +129,60 @@
     });
   });
 
-  window.vendor.svg4everybody();
+  // Swiper
+
+  /* var liveSwiper = document.querySelector('.live-israel');
+  var liveSlider = null;
+
+  /!*liveSwiper.classList.remove('live--no-js');*!/
+
+  var activeSwiper = function () {
+    liveSlider = new Swiper('.live-israel__wrapper', {
+      direction: 'horizontal',
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bulletClass: 'live-israel__control',
+        bulletActiveClass: 'live-israel__control--active',
+      },
+    });
+  };
+
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    activeSwiper();
+  }
+
+  window.addEventListener('resize', function () {
+    var viewport = document.documentElement.clientWidth;
+    if (viewport < 768 && !liveSlider) {
+      activeSwiper();
+    } else if (viewport >= 768 && liveSlider) {
+      liveSlider.destroy();
+      liveSlider = null;
+    }
+  });*/
+
+  // question
+
+  var question = document.querySelector('.question');
+  var questionButtons = question.querySelectorAll('.question__item');
+
+  question.classList.remove('question--no-js');
+
+  questionButtons.forEach(function (button, i) {
+    button.addEventListener('click', function () {
+      if (button.classList.contains('question__item--active')) {
+        button.classList.remove('question__item--active');
+      } else {
+        switchTabs(questionButtons, i, 'question__item--active');
+      }
+    });
+  });
+
+  /* window.vendor.svg4everybody();*/
+  /* window.vendor.Swiper();*/
 })();

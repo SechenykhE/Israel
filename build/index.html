@@ -73,7 +73,7 @@
               <li class="programs__item programs__item--academy programs__item--active">
                 <button>Академические</button>
               </li>
-              <li class="programs__item programs__item--intern">тзь ыефке
+              <li class="programs__item programs__item--intern">
                 <button>Стажировки</button>
               </li>
               <li class="programs__item programs__item--volunteer">
@@ -159,66 +159,69 @@
 
       <section class="live-israel">
         <div class="live-israel__inner container container--live-israel">
-          <h2>Жизнь в израиле</h2>
+          <h2>Жизнь <br>в израиле</h2>
           <p>Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.</p>
-          <div class="live-israel__wrapper">
-            <div class="live-israel__item live-israel__item--left">
-              <p>Экскурсии по Израилю и знакомство с его историей</p>
-              <picture>
-                <!-- 1x: 288px 2x: 576px -->
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/excursion-mobile@1x.webp 1x, img/excursion-mobile@2x.webp 2x">
-                <!-- 1x: 482px 2x: 964px -->
-                <source type="image/webp" srcset="img/excursion-desktop@1x.webp 1x, img/excursion-desktop@2x.webp 2x">
+          <div class="swiper-container">
+            <div class="live-israel__wrapper swiper-wrapper">
+              <div class="live-israel__item live-israel__item--excursion live-israel__item--active swiper-slide">
+                <p>Экскурсии по Израилю и знакомство с его историей</p>
+                <picture>
+                  <!-- 1x: 288px 2x: 576px -->
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/excursion-mobile@1x.webp 1x, img/excursion-mobile@2x.webp 2x">
+                  <!-- 1x: 482px 2x: 964px -->
+                  <source type="image/webp" srcset="img/excursion-desktop@1x.webp 1x, img/excursion-desktop@2x.webp 2x">
 
-                <img src="img/excursion-desktop@1x.png" srcset=" img/excursion-desktop@1x.png 1x, img/excursion-desktop@2x.png 2x" width="482" height="732" alt="Экскурсия по Израилю">
-              </picture>
+                  <img src="img/excursion-desktop@1x.png" srcset=" img/excursion-desktop@1x.png 1x, img/excursion-desktop@2x.png 2x" width="482" height="732" alt="Экскурсия по Израилю">
+                </picture>
+              </div>
+              <div class="live-israel__wrapper live-israel__wrapper--right">
+                <div class="live-israel__item live-israel__item--study swiper-slide">
+                  <p>Изучение иврита</p>
+                  <picture>
+                    <!-- 1x: 288px 2x: 576px -->
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/study-mobile@1x.webp 1x, img/study-mobile@2x.webp 2x">
+                    <!-- 1x: 211px 2x: 422px -->
+                    <source type="image/webp" srcset="img/study-desktop@1x.webp 1x, img/study-desktop@2x.webp 2x">
+
+                    <img src="img/study-desktop@1x.png" srcset=" img/study-desktop@1x.png 1x, img/study-desktop@2x.png 2x" width="211" height="318" alt="Мужчина изучает иврит">
+                  </picture>
+                </div>
+                <div class="live-israel__item live-israel__item--teach swiper-slide">
+                  <p>Обучение современным навыкам и профессиям</p>
+                  <picture>
+                    <!-- 1x: 288px 2x: 576px -->
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/teach-mobile@1x.webp 1x, img/teach-mobile@2x.webp 2x">
+                    <!-- 1x: 411px 2x: 822px -->
+                    <source type="image/webp" srcset="img/teach-desktop@1x.webp 1x, img/teach-desktop@2x.webp 2x">
+
+                    <img src="img/teach-desktop@1x.png" srcset=" img/teach-desktop@1x.png 1x, img/teach-desktop@2x.png 2x" width="411" height="318" alt="Обучение">
+                  </picture>
+                </div>
+                <div class="live-israel__item live-israel__item--together swiper-slide">
+                  <p>Совместные творческие проекты с израильской молодёжью</p>
+                  <picture>
+                    <!-- 1x: 288px 2x: 576px -->
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/together-mobile@1x.webp 1x, img/together-mobile@2x.webp 2x">
+                    <!-- 1x: 411px 2x: 822px -->
+                    <source type="image/webp" srcset="img/together-desktop@1x.webp 1x, img/together-desktop@2x.webp 2x">
+
+                    <img src="img/together-desktop@1x.png" srcset=" img/together-desktop@1x.png 1x, img/together-desktop@2x.png 2x" width="411" height="318" alt="Совместные проекты">
+                  </picture>
+                </div>
+                <div class="live-israel__item live-israel__item--leader swiper-slide">
+                  <p>Развитие лидерства</p>
+                  <picture>
+                    <!-- 1x: 288px 2x: 576px -->
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/leader-mobile@1x.webp 1x, img/leader-mobile@2x.webp 2x">
+                    <!-- 1x: 214px 2x: 428px -->
+                    <source type="image/webp" srcset="img/leader-desktop@1x.webp 1x, img/leader-desktop@2x.webp 2x">
+
+                    <img src="img/leader-desktop@1x.png" srcset=" img/leader-desktop@1x.png 1x, img/leader-desktop@2x.png 2x" width="214" height="318" alt="Развитие лидерских качеств">
+                  </picture>
+                </div>
+              </div>
             </div>
-            <div class="live-israel__wrapper live-israel__wrapper--right">
-              <div class="live-israel__item">
-                <p>Изучение иврита</p>
-                <picture>
-                  <!-- 1x: 288px 2x: 576px -->
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/study-mobile@1x.webp 1x, img/study-mobile@2x.webp 2x">
-                  <!-- 1x: 211px 2x: 422px -->
-                  <source type="image/webp" srcset="img/study-desktop@1x.webp 1x, img/study-desktop@2x.webp 2x">
-
-                  <img src="img/study-desktop@1x.png" srcset=" img/study-desktop@1x.png 1x, img/study-desktop@2x.png 2x" width="211" height="318" alt="Мужчина изучает иврит">
-                </picture>
-              </div>
-              <div class="live-israel__item">
-                <p>Обучение современным навыкам и профессиям</p>
-                <picture>
-                  <!-- 1x: 288px 2x: 576px -->
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/teach-mobile@1x.webp 1x, img/teach-mobile@2x.webp 2x">
-                  <!-- 1x: 411px 2x: 822px -->
-                  <source type="image/webp" srcset="img/teach-desktop@1x.webp 1x, img/teach-desktop@2x.webp 2x">
-
-                  <img src="img/teach-desktop@1x.png" srcset=" img/teach-desktop@1x.png 1x, img/teach-desktop@2x.png 2x" width="411" height="318" alt="Обучение">
-                </picture>
-              </div>
-              <div class="live-israel__item">
-                <p>Совместные творческие проекты с израильской молодёжью</p>
-                <picture>
-                  <!-- 1x: 288px 2x: 576px -->
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/together-mobile@1x.webp 1x, img/together-mobile@2x.webp 2x">
-                  <!-- 1x: 411px 2x: 822px -->
-                  <source type="image/webp" srcset="img/together-desktop@1x.webp 1x, img/together-desktop@2x.webp 2x">
-
-                  <img src="img/together-desktop@1x.png" srcset=" img/together-desktop@1x.png 1x, img/together-desktop@2x.png 2x" width="411" height="318" alt="Совместные проекты">
-                </picture>
-              </div>
-              <div class="live-israel__item">
-                <p>Развитие лидерства</p>
-                <picture>
-                  <!-- 1x: 288px 2x: 576px -->
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/leader-mobile@1x.webp 1x, img/leader-mobile@2x.webp 2x">
-                  <!-- 1x: 214px 2x: 428px -->
-                  <source type="image/webp" srcset="img/leader-desktop@1x.webp 1x, img/leader-desktop@2x.webp 2x">
-
-                  <img src="img/leader-desktop@1x.png" srcset=" img/leader-desktop@1x.png 1x, img/leader-desktop@2x.png 2x" width="214" height="318" alt="Развитие лидерских качеств">
-                </picture>
-              </div>
-            </div>
+            <div class="live-israel__control swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -227,10 +230,45 @@
         <div class="photo__inner container">
           <div class="photo__wrapper">
             <h2>#masaisrael</h2>
-            <p>Познакомьтесь с программой  от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.</p>
+            <p>Познакомьтесь с программой  от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и путешествиях в Израиле.</p>
             <a class="button" href="#">смотреть фото</a>
           </div>
         </div>
+      </section>
+
+      <section class="question question--no-js">
+        <div class="question__inner container">
+          <div class="question__wrapper">
+            <h2>частые вопросы</h2>
+            <ol class="question__list question__list--no-js">
+              <li class="question__item">
+                <h3>Кто организатор? Какие сроки у программы?</h3>
+                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="question__item">
+                <h3>Что такое грант на обучение?</h3>
+                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="question__item">
+                <h3>Как определяется стоимость программы?</h3>
+                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="question__item">
+                <h3>Что такое грант на обучение?</h3>
+                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="question__item">
+                <h3>Признаётся ли учеба в рамках проекта для дальнейшего обучения?</h3>
+                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+              <li class="question__item">
+                <h3>Как выглдядит полный процесс регистрации на программу «Маса»?</h3>
+                <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
       </section>
     </main>
 

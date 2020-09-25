@@ -1,0 +1,214 @@
+.question {
+  background-color: $second-color;
+  background-image: url("../img/question-people@1x.png"), url("../img/bag-desktop@1x.png"), url("/../img/questions-bg-desktop@1x.png");
+  background-position: 100% 136px, 0 102%, 0 56px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 47.2% auto, 153px 177px, 100%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/question-people@2x.png"), url("../img/bag-desktop@2x.png"), url("/../img/questions-bg-desktop@2x.png");
+  }
+}
+
+.question__inner {
+  padding-top: 136px;
+  padding-bottom: 100px;
+}
+
+.question__wrapper {
+  width: 48.9%;
+  margin-right: auto;
+}
+
+.question h2 {
+  @include reset;
+  @include title-desktop;
+
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.question__list {
+  @include reset;
+
+  counter-reset: myCounter;
+}
+
+.question__item {
+  @include cursor-hover;
+
+  min-height: 82px;
+  padding-top: 23px;
+  padding-bottom: 25px;
+  margin-bottom: 14px;
+
+  border-bottom: 1px solid rgba($text-color, 0.2);
+}
+
+.question__item h3 {
+  @include reset;
+  @include text(17px, 1.41, 400);
+
+  position: relative;
+
+  padding-left: 28px;
+  padding-right: 27%;
+
+  color: $text-color;
+
+  &::before {
+    @include text(28px, 1.7, 700);
+
+    position: absolute;
+    top: -15px;
+    left: -1px;
+    z-index: 1;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+
+    display: block;
+    line-height: 48px;
+    width: 13px;
+    height: 48px;
+
+    color: $additional-color;
+    text-align: center;
+    background: $second-color;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 9px;
+    right: 6.6%;
+
+    width: 16px;
+    height: 10px;
+
+    background: url("../img/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.question__item p {
+  @include reset;
+  @include text(15px, 1.4, 400);
+
+  display: none;
+  width: 88%;
+  margin-top: 26px;
+  padding-bottom: 7px;
+  color: rgba($text-color, 0.74);
+}
+
+.question__item--active h3 {
+  &::after {
+    background: url("../img/icon-arrow-up.svg");
+  }
+}
+
+.question__item--active p {
+  display: block;
+}
+
+.question--no-js h3 {
+  &::after {
+    background: none;
+  }
+}
+
+.question--no-js p {
+  display: block;
+}
+
+
+@media (max-width: $tablet-width-max) {
+  .question {
+    background-color: $second-color;
+    background-image: url("../img/bag-desktop@1x.png"), url("/../img/questions-bg-desktop@1x.png");
+    background-position: 0 863px, 0 56px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 153px 177px, 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bag-desktop@2x.png"), url("/../img/questions-bg-desktop@2x.png");
+    }
+  }
+
+  .question__wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .question {
+    background-color: $second-color;
+    background-image: url("../img/bag-mobile@1x.png");
+    background-position: 0 80%;
+    background-repeat: no-repeat;
+    background-size: 146px 178px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bag-mobile@2x.png");
+    }
+  }
+
+  .question__inner {
+    padding-top: 80px;
+  }
+
+  .question h2 {
+    @include title-mobile;
+
+    text-align: center;
+  }
+
+  .question__wrapper {
+    width: 100%;
+  }
+
+  .question__item {
+    min-height: 64px;
+
+    justify-content: flex-start;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 24px;
+  }
+
+  .question__item h3 {
+    @include text(16px, 1.6, 400);
+
+    padding-left: 25px;
+    padding-right: 10%;
+
+    &::before {
+      top: -14px;
+      left: 0;
+
+      color: $additional-color;
+      text-align: center;
+    }
+
+    &::after {
+      top: 9px;
+      right: 0;
+
+      width: 16px;
+      height: 10px;
+
+      background: url("../img/icon-arrow-down.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .question__item p {
+    @include text(14px, 1.6, 400);
+
+    width: 93%;
+    margin-top: 16px;
+    padding-bottom: 0;
+  }
+}

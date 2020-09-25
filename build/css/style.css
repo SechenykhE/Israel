@@ -1442,13 +1442,13 @@ a.button:active {
 
 .how-go {
   background-color: #ffffff;
-  background-image: url("../../img/how-to-go-people-desktop@1x.png"), url("../img/stamp-desktop@1x.png"), url("/../img/how-to-go-bg-desktop@1x.png");
+  background-image: url("../img/how-to-go-people-desktop@1x.png"), url("../img/stamp-desktop@1x.png"), url("/../img/how-to-go-bg-desktop@1x.png");
   background-position: 12px 161px, 100% 371px, 0 -39px;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 42.5% auto, 216px 254px, 100%; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .how-go {
-      background-image: url("../../img/how-to-go-people-desktop@2x.png"), url("../img/stamp-desktop@2x.png"), url("/../img/how-to-go-bg-desktop@2x.png"); } }
+      background-image: url("../img/how-to-go-people-desktop@2x.png"), url("../img/stamp-desktop@2x.png"), url("/../img/how-to-go-bg-desktop@2x.png"); } }
 
 .how-go__inner {
   padding-top: 192px;
@@ -1568,7 +1568,6 @@ a.button:active {
 @media (max-width: 1023px) {
   .how-go {
     position: relative;
-    z-index: -1;
     background-image: url("../img/stamp-desktop@1x.png"), url("/../img/how-to-go-bg-desktop@1x.png");
     background-position: 100% 371px, 0 -39px;
     background-repeat: no-repeat, no-repeat;
@@ -1614,10 +1613,10 @@ a.button:active {
 
 @media (max-width: 767px) {
     .how-go::before {
-      opacity: 0; }
+      display: none; }
   .how-go__inner {
     padding-top: 80px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     padding-right: 5%; }
   .how-go__wrapper {
     width: 100%;
@@ -1684,7 +1683,9 @@ a.button:active {
       background-image: url("../img/watch@2x.png"), url("/../img/live-israel-bg-desktop@2x.png"); } }
 
 .live-israel__inner {
-  padding-top: 75px; }
+  padding-top: 75px;
+  padding-right: 8%;
+  padding-bottom: 25px; }
 
 .live-israel h2 {
   margin: 0;
@@ -1699,6 +1700,9 @@ a.button:active {
   color: #1fc0fc;
   margin-bottom: 24px;
   text-align: center; }
+
+.live-israel br {
+  display: none; }
 
 .live-israel p {
   margin: 0;
@@ -1719,25 +1723,40 @@ a.button:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
   margin-top: -20px; }
 
-.live-israel__item--left {
-  width: 42.2%;
-  margin-right: 8px; }
-
 .live-israel__wrapper--right {
-  width: 56.3%;
+  width: 56.5%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 67px; }
+  margin-top: 5.8%; }
 
 .live-israel__item {
   position: relative;
   -ms-flex-negative: 0;
-      flex-shrink: 0; }
+      flex-shrink: 0;
+  margin-bottom: 2.3%; }
+  .live-israel__item--excursion {
+    width: 41.8%;
+    margin-right: 1.3%; }
+  .live-israel__item--study {
+    width: 32.5%;
+    margin-left: -4px; }
+  .live-israel__item--teach {
+    width: 62.9%;
+    margin-right: 5px; }
+  .live-israel__item--together {
+    width: 62.9%;
+    margin-left: -4px; }
+  .live-israel__item--leader {
+    width: 32.8%; }
+
+.live-israel__item img {
+  width: 100%; }
 
 .live-israel__item p {
   margin: 0;
@@ -1746,26 +1765,122 @@ a.button:active {
   line-height: 1.19;
   font-weight: 800;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 8%;
+  bottom: 33px;
+  width: 81%;
   font-family: "Raleway", "Arial", sans-serif;
   color: #ffffff;
+  text-align: left;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
+
+.live-israel__item.live-israel__item--study p {
+  bottom: 46px;
+  left: 11.5%; }
+
+.live-israel__item.live-israel__item--teach p {
+  bottom: 46px;
+  left: 7.8%; }
+
+.live-israel__item.live-israel__item--together p {
+  bottom: 43px;
+  left: 7.8%;
+  width: 88%; }
+
+.live-israel__item.live-israel__item--leader p {
+  bottom: 43px;
+  left: 11.5%; }
+
+@media (max-width: 1023px) {
+  .live-israel__item p {
+    font-size: 16px;
+    line-height: 1.17;
+    font-weight: 800; }
+  .live-israel__item.live-israel__item--excursion p,
+  .live-israel__item.live-israel__item--study p,
+  .live-israel__item.live-israel__item--teach p,
+  .live-israel__item.live-israel__item--together p,
+  .live-israel__item.live-israel__item--leader p {
+    bottom: 10%; } }
+
+@media (max-width: 767px) {
+  .live-israel {
+    background: none; }
+  .live-israel__inner {
+    padding-top: 5px;
+    padding-bottom: 20px; }
+  .live-israel__wrapper {
+    width: 100%;
+    height: auto; }
+  .live-israel h2 {
+    font-size: 32px;
+    line-height: 1.22;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #1fc0fc;
+    padding-left: 8px; }
+  .live-israel br {
+    display: block; }
+  .live-israel p {
+    font-size: 16px;
+    line-height: 1.63;
+    font-weight: 400;
+    margin-bottom: 23px;
+    text-align: left; }
+  .live-israel__wrapper {
+    display: block;
+    margin-top: 0; }
+  .live-israel__item {
+    display: none;
+    width: 100%; }
+  .live-israel__item--active {
+    display: block; }
+  .live-israel__item--excursion,
+  .live-israel__wrapper--right {
+    width: 103.4%; }
+  .live-israel__item.live-israel__item--excursion p,
+  .live-israel__item.live-israel__item--study p,
+  .live-israel__item.live-israel__item--teach p,
+  .live-israel__item.live-israel__item--together p,
+  .live-israel__item.live-israel__item--leader p {
+    font-size: 18px;
+    line-height: 1.17;
+    font-weight: 800;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 0.5%;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center; }
+  .live-israel__control {
+    width: 6px;
+    height: 6px;
+    background: rgba(72, 72, 72, 0.2); }
+  .live-israel__control--active {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); } }
 
 .photo {
   background-color: #ffffff;
   background-image: url("../img/photo-bg-desktop@1x.png");
-  background-position: 0 160px;
+  background-position: 4px 108px;
   background-repeat: no-repeat;
   background-size: 100%; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .photo {
+      background-image: url("../img/photo-bg-desktop@2x.png"); } }
 
 .photo__inner {
-  padding-top: 280px;
+  padding-top: 229px;
   padding-bottom: 196px; }
 
 .photo__wrapper {
   width: 403px;
-  margin-right: 4.3%;
+  margin-right: 4.5%;
   margin-left: auto; }
 
 .photo h2 {
@@ -1779,7 +1894,8 @@ a.button:active {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #1fc0fc;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  margin-left: -5px; }
 
 .photo p {
   margin: 0;
@@ -1787,7 +1903,7 @@ a.button:active {
   font-size: 17px;
   line-height: 1.7;
   font-weight: 400;
-  margin-bottom: 49px;
+  margin-bottom: 48px;
   color: #ffffff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
 
@@ -1812,37 +1928,216 @@ a.button:active {
   .photo {
     background-color: #ffffff;
     background-image: url("../img/photo-bg-mobile@1x.png");
-    background-position: 0 94px;
+    background-position: 0 62%;
     background-repeat: no-repeat;
     background-size: 100%; }
   .photo__inner {
-    padding-top: 50px;
-    padding-left: 3%; }
+    padding-top: 22.5%;
+    padding-bottom: 0; }
   .photo__wrapper {
     width: 100%;
     margin-right: auto;
     margin-left: auto; }
   .photo h2 {
-    margin-bottom: 94px; }
+    margin-bottom: 96px;
+    margin-left: -2.4%; }
   .photo p {
     font-size: 16px;
     line-height: 1.6;
     font-weight: 400;
-    margin-bottom: 49px; }
+    margin-bottom: 59px;
+    padding-left: 2.6%;
+    padding-right: 2.6%; }
   .photo .button {
     width: 264px;
-    margin-left: 0;
-    padding: 20px;
-    padding-left: 70px; }
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 89px; }
     .photo .button::before {
-      position: absolute;
-      content: "";
       top: 18px;
-      left: 38px;
-      width: 24px;
-      height: 24px;
-      background: url("../../img/icon-insta.svg");
-      background-repeat: no-repeat; } }
+      left: 57px; } }
+
+.question {
+  background-color: #ffffff;
+  background-image: url("../img/question-people@1x.png"), url("../img/bag-desktop@1x.png"), url("/../img/questions-bg-desktop@1x.png");
+  background-position: 100% 136px, 0 102%, 0 56px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 47.2% auto, 153px 177px, 100%; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .question {
+      background-image: url("../img/question-people@2x.png"), url("../img/bag-desktop@2x.png"), url("/../img/questions-bg-desktop@2x.png"); } }
+
+.question__inner {
+  padding-top: 136px;
+  padding-bottom: 100px; }
+
+.question__wrapper {
+  width: 48.9%;
+  margin-right: auto; }
+
+.question h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 1.23;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1fc0fc;
+  margin-bottom: 25px;
+  text-align: left; }
+
+.question__list {
+  margin: 0;
+  padding: 0;
+  counter-reset: myCounter; }
+
+.question__item {
+  cursor: url("../img/pointer-hand.svg"), pointer;
+  min-height: 82px;
+  padding-top: 23px;
+  padding-bottom: 25px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(72, 72, 72, 0.2); }
+
+.question__item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  line-height: 1.41;
+  font-weight: 400;
+  position: relative;
+  padding-left: 28px;
+  padding-right: 27%;
+  color: #484848; }
+  .question__item h3::before {
+    font-size: 28px;
+    line-height: 1.7;
+    font-weight: 700;
+    position: absolute;
+    top: -15px;
+    left: -1px;
+    z-index: 1;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    display: block;
+    line-height: 48px;
+    width: 13px;
+    height: 48px;
+    color: #ffc341;
+    text-align: center;
+    background: #ffffff; }
+  .question__item h3::after {
+    position: absolute;
+    content: "";
+    top: 9px;
+    right: 6.6%;
+    width: 16px;
+    height: 10px;
+    background: url("../img/icon-arrow-down.svg");
+    background-repeat: no-repeat; }
+
+.question__item p {
+  display: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
+  width: 88%;
+  margin-top: 26px;
+  padding-bottom: 7px;
+  color: rgba(72, 72, 72, 0.74); }
+
+.question__item--active h3::after {
+  background: url("../img/icon-arrow-up.svg"); }
+
+.question__item--active p {
+  display: block; }
+
+.question--no-js h3::after {
+  background: none; }
+
+.question--no-js p {
+  display: block; }
+
+@media (max-width: 1023px) {
+  .question {
+    background-color: #ffffff;
+    background-image: url("../img/bag-desktop@1x.png"), url("/../img/questions-bg-desktop@1x.png");
+    background-position: 0 863px, 0 56px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 153px 177px, 100%; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .question {
+      background-image: url("../img/bag-desktop@2x.png"), url("/../img/questions-bg-desktop@2x.png"); } }
+
+@media (max-width: 1023px) {
+  .question__wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (max-width: 767px) {
+  .question {
+    background-color: #ffffff;
+    background-image: url("../img/bag-mobile@1x.png");
+    background-position: 0 80%;
+    background-repeat: no-repeat;
+    background-size: 146px 178px; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .question {
+      background-image: url("../img/bag-mobile@2x.png"); } }
+
+@media (max-width: 767px) {
+  .question__inner {
+    padding-top: 80px; }
+  .question h2 {
+    font-size: 32px;
+    line-height: 1.22;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #1fc0fc;
+    text-align: center; }
+  .question__wrapper {
+    width: 100%; }
+  .question__item {
+    min-height: 64px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 24px; }
+  .question__item h3 {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    padding-left: 25px;
+    padding-right: 10%; }
+    .question__item h3::before {
+      top: -14px;
+      left: 0;
+      color: #ffc341;
+      text-align: center; }
+    .question__item h3::after {
+      top: 9px;
+      right: 0;
+      width: 16px;
+      height: 10px;
+      background: url("../img/icon-arrow-down.svg");
+      background-repeat: no-repeat; }
+  .question__item p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    width: 93%;
+    margin-top: 16px;
+    padding-bottom: 0; } }
 
 .modal {
   position: fixed;
