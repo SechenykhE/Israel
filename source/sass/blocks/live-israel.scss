@@ -58,6 +58,7 @@
 .live-israel__item {
   position: relative;
   flex-shrink: 0;
+  height: auto;
   margin-bottom: 2.3%;
 
   &--excursion {
@@ -126,6 +127,10 @@
 }
 
 @media (max-width: $tablet-width-max) {
+  .live-israel__inner {
+    padding-top: 5px;
+  }
+
   .live-israel__item p {
     @include text(16px, 1.17, 800);
   }
@@ -150,11 +155,20 @@
   }
 
   .live-israel__wrapper {
-    display: block;
+    display: flex;
     width: 100%;
     height: auto;
     margin-top: 0;
+
+    overflow: hidden;
   }
+
+  .live-israel__swiper {
+    position: relative;
+    width: 288px;
+    height: 424px;
+  }
+
 
   .live-israel h2 {
     @include title-mobile;
@@ -173,13 +187,13 @@
   }
 
   .live-israel__item {
-    display: none;
+    /*display: none;*/
     width: 100%;
   }
 
-  .live-israel__item--active {
+  /* .live-israel__item--active {
     display: block;
-  }
+  }*/
 
   .live-israel__item--excursion,
   .live-israel__wrapper--right {

@@ -1,0 +1,53 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  @include cursor-hover;
+
+  margin-left: 18px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.social__item--tw {
+  margin-left: 14px;
+}
+
+.social__item--tg {
+  margin-top: 2px;
+}
+
+.social__item a {
+  margin-bottom: 0;
+}
+
+.social__item svg {
+  fill: rgba(#000000, 0.16);
+}
+
+.social__item a:hover svg,
+.social__item a:focus svg {
+  fill: $additional-color;
+}
+
+.social__item a:active svg {
+  fill: rgba($text-color, 0.3);
+}
+
+@media (max-width: $mobile-width-max) {
+  .social__item {
+    @include cursor-hover;
+
+    margin-left: 18px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .social__item--tw {
+    margin-left: 14px;
+  }
+}

@@ -24,6 +24,12 @@
   }
 }
 
+.form p {
+  @include reset;
+  border-radius: 80px;
+  overflow: hidden;
+}
+
 .form__input:hover,
 .form__input:focus {
   @include animation;
@@ -108,21 +114,53 @@
 }
 
 .form--want-go {
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .form--want-go input {
+  max-width: 477px;
+  padding-right: 45%;
   margin: 0;
 }
 
 .form--want-go button {
-  position: relative;
+  position: absolute;
   z-index: 3;
-  flex-shrink: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
   width: 216px;
   margin: 0;
-  margin-left: -38px;
+}
+
+.form--contacts {
+  display: flex;
+  margin-top: -4px;
+}
+
+.form--contacts input {
+  width: 250px;
+  margin-right: 3.3%;
+}
+
+.form--contacts button {
+  flex-shrink: 0;
+  width: 215px;
+  margin: 0;
+}
+
+@media (max-width: $tablet-width-max) {
+  .form--contacts {
+    flex-direction: column;
+    align-items: center;
+    max-width: 767px;
+  }
+
+  .form--contacts input {
+    width: 100%;
+    max-width: 767px;
+    margin-right: 0;
+  }
 }
 
 @media (max-width: $mobile-width-max) {
@@ -143,18 +181,38 @@
   }
 
   .form--want-go {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
+  .form--want-go p {
+    width: 100%;
+  }
+
   .form--want-go input {
-    width: 288px;
+    width: 100%;
     margin-bottom: 10px;
   }
 
   .form--want-go button {
-    position: relative;
+    position: static;
     width: 264px;
     margin: 0;
+    transform: translateY(0);
+  }
+
+  .form--contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form--contacts input {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .form--contacts button {
+    width: 264px;
   }
 }

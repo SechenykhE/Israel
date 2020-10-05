@@ -25,7 +25,7 @@
 }
 
 .want-go__wrapper {
-  width: 477px;
+  width: 576px;
   padding-left: 8.6%;
 }
 
@@ -40,6 +40,7 @@
   @include reset;
   @include text(17px, 1.7, 400);
 
+  width: 445px;
   margin-bottom: 64px;
 
   color: rgba($text-color, 0.87);
@@ -113,8 +114,8 @@
   .want-go__wrapper p {
     @include text(16px, 1.6, 400);
 
-    max-width: 500px;
-    margin-bottom: 23px;
+    width: 100%;
+    margin-bottom: 49px;
     margin-right: auto;
     margin-left: auto;
   }

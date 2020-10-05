@@ -131,13 +131,13 @@
 
   // Swiper
 
-  /* var liveSwiper = document.querySelector('.live-israel');
-  var liveSlider = null;
+  /* var liveIsrael = document.querySelector('.live-israel');
+  var liveSwiper = null;
 
-  /!*liveSwiper.classList.remove('live--no-js');*!/
+  /!*liveIsrael.classList.remove('live--no-js');*!/
 
   var activeSwiper = function () {
-    liveSlider = new Swiper('.live-israel__wrapper', {
+    liveSwiper = new Swiper('.live-israel__swiper', {
       direction: 'horizontal',
       loop: true,
       autoplay: {
@@ -158,11 +158,11 @@
 
   window.addEventListener('resize', function () {
     var viewport = document.documentElement.clientWidth;
-    if (viewport < 768 && !liveSlider) {
+    if (viewport < 768 && !liveSwiper) {
       activeSwiper();
-    } else if (viewport >= 768 && liveSlider) {
-      liveSlider.destroy();
-      liveSlider = null;
+    } else if (viewport >= 768 && liveSwiper) {
+      liveSwiper.destroy();
+      liveSwiper = null;
     }
   });*/
 

@@ -1,4 +1,5 @@
 @import "normalize.scss";
+@import "blocks/swiper.scss";
 @import "fonts.scss";
 @import "variables.scss";
 @import "mixins.scss";
@@ -15,6 +16,10 @@
 @import "blocks/live-israel.scss";
 @import "blocks/photo.scss";
 @import "blocks/question.scss";
+@import "blocks/social.scss";
+@import "blocks/reviews.scss";
+@import "blocks/contacts.scss";
+@import "blocks/footer.scss";
 @import "blocks/modal.scss";
 @import "blocks/modal-order.scss";
 @import "blocks/modal-success.scss";

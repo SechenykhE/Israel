@@ -1,0 +1,255 @@
+.reviews {
+  background-color: $second-color;
+  background-image: url("../img/sketch-city-desktop@1x.png"), url("../img/reviews-bg-desktop@1x.png");
+  background-position: right 51.5%, right 165px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 38.3%, 92.3%;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/sketch-city-desktop@2x.png"), url("../img/reviews-bg-desktop@2x.png");
+  }
+}
+
+.reviews__inner {
+  padding-top: 126px;
+  padding-bottom: 30px;
+}
+
+.reviews h2 {
+  @include reset;
+  @include title-desktop;
+
+  text-align: center;
+}
+
+.reviews__swiper {
+  position: relative;
+}
+
+.reviews__item {
+  display: none;
+}
+
+.reviews__item--active {
+  display: flex;
+}
+
+.reviews__img {
+  width: 32%;
+  margin-left: -13px;
+  margin-right: 38px;
+  padding-top: 8px;
+}
+
+.reviews__wrapper {
+  width: 59.4%;
+  padding-top: 48px;
+}
+
+.reviews__wrapper h3 {
+  @include reset;
+  @include text(24px, 1.5, 500);
+
+  margin-bottom: 8px;
+
+  color: rgba($text-color, 0.74);
+}
+
+.reviews__wrapper p {
+  @include reset;
+  @include text(17px, 1.7, 400);
+
+  margin-bottom: 17px;
+
+  color: rgba($text-color, 0.74);
+}
+
+.reviews__program p {
+  @include reset;
+  @include text(15px, 1.4, 400);
+
+  margin-bottom: 32px;
+
+  color: rgba($text-color, 0.74);
+}
+
+.reviews__program span {
+  @include text(15px, 1.4, 400);
+
+  color: $first-color;
+}
+
+.reviews__wrapper a {
+  @include cursor-hover;
+  @include text(17px, 1.5, 400);
+
+  display: block;
+  margin-bottom: 56px;
+  text-decoration: underline;
+  color: $first-color;
+}
+
+.reviews__social {
+  @include list-reset;
+
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.reviews__control {
+  position: absolute;
+  left: 34.2%;
+  bottom: 62px;
+
+  display: flex;
+}
+
+.reviews__control p,
+.reviews__control span {
+  @include reset;
+  @include text(17px, 1.5, 400);
+
+  color: rgba($text-color, 0.5);
+}
+
+.reviews__control p {
+  margin-right: 23px;
+}
+
+.reviews__button {
+  position: relative;
+  width: 44px;
+}
+
+.reviews__button button {
+  @include cursor-hover;
+
+  width: 15px;
+  height: 18px;
+
+  border: none;
+  background: none;
+}
+
+.reviews__button-left::before,
+.reviews__button-right::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 18px;
+}
+
+button.reviews__button-left::before {
+  top: 3px;
+  left: 0;
+
+  background: url("../img/icon-arrow-left.svg");
+  background-repeat: no-repeat;
+}
+
+button.reviews__button-right::before {
+  top: 3px;
+  right: 0;
+
+  background: url("../img/icon-arrow-right.svg");
+  background-repeat: no-repeat;
+}
+
+@media (max-width: $mobile-width-max) {
+  .reviews {
+    background-color: $second-color;
+    background-image: url("../img/sketch-city-mobile@1x.png"), url("../img/reviews-bg-mobile@1x.png");
+    background-position: right 63.3%, right 81%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 289px, 92.3%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/sketch-city-mobile@2x.png"), url("../img/reviews-bg-mobile@2x.png");
+    }
+  }
+
+  .reviews__inner {
+    padding-top: 21px;
+    padding-bottom: 30px;
+  }
+
+  .reviews h2 {
+    @include title-mobile;
+
+    margin-bottom: 14px;
+  }
+
+  .reviews__item {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .reviews__img {
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .reviews__wrapper {
+    width: 100%;
+    padding-top: 58px;
+  }
+
+  .reviews__wrapper h3 {
+    @include text(24px, 1.5, 500);
+  }
+
+  .reviews__wrapper p {
+    @include text(16px, 1.62, 400);
+
+    margin-bottom: 17px;
+  }
+
+  .reviews__program p {
+    @include text(14px, 1.6, 400);
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .reviews__program span {
+    @include text(14px, 1.6, 400);
+  }
+
+  .reviews__wrapper a {
+    @include text(16px, 1.5, 400);
+
+    padding-top: 6px;
+    margin-bottom: 16px;
+    text-decoration: underline;
+    color: $first-color;
+  }
+
+  .reviews__social {
+    justify-content: flex-start;
+    margin-left: -4px;
+  }
+
+  .reviews__control {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 338px;
+
+    display: flex;
+    margin-left: 3px;
+  }
+
+  .reviews__control p,
+  .reviews__control span {
+    @include reset;
+    @include text(17px, 1.5, 400);
+
+    color: rgba($text-color, 0.5);
+  }
+
+  .reviews__control p {
+    margin-right: 23px;
+  }
+}

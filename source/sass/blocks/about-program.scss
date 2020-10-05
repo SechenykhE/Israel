@@ -107,6 +107,12 @@
 }
 
 @media (max-width: $mobile-width-max) {
+  .about-program__inner {
+    padding-bottom: 56px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
   .about-program {
     background-image: url("../img/about_bg-mobile@1x.png");
     background-repeat: no-repeat;
@@ -147,9 +153,9 @@
   }
 
   .about-program__play {
-    top: 94px;
+    top: 54%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
     z-index: 2;
 
     width: 53.3px;
