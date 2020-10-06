@@ -131,8 +131,8 @@
             <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
             <form class="form form--want-go" action="https://echo.htmlacademy.ru" method="post">
               <p>
-              <label class="visually-hidden" for="want-go-phone">Ваш телефон</label>
-              <input class="form__input" id="want-go-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
+                <input class="form__input js-tel" id="want-go-phone" type="tel" name="user-phone" placeholder="телефон" required>
+                <label  for="want-go-phone"><span class="visually-hidden">Ваш телефон</span></label>
               </p>
               <button class="button" type="submit">перезвоните мне</button>
             </form>
@@ -635,7 +635,7 @@
             <label class="visually-hidden" for="contacts-name">Ваше имя:</label>
             <input class="form__input" id="contacts-name" type="text" name="user-name" placeholder="Имя" required>
             <label class="visually-hidden" for="contacts-phone">Ваш телефон</label>
-            <input class="form__input" id="contacts-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
+            <input class="form__input js-tel" id="contacts-phone" type="tel" name="user-phone" placeholder="телефон" required>
 
             <button class="button" type="submit">перезвоните мне</button>
           </form>
@@ -690,7 +690,7 @@
           <label class="visually-hidden" for="input-name">Ваше имя:</label>
           <input class="form__input" id="input-name" type="text" name="user-name" placeholder="Имя" required>
           <label class="visually-hidden" for="input-phone">Ваш телефон</label>
-          <input class="form__input" id="input-phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="телефон" required>
+          <input class="form__input js-tel" id="input-phone" type="tel" name="user-phone" placeholder="телефон" required>
 
           <button class="button" type="submit">перезвоните мне</button>
 
@@ -713,7 +713,7 @@
     </section>
 
     <script src="js/vendor.js"></script>
-    <script src="js/swiper.js"></script>
+    <!--<script src="js/swiper.js"></script>-->
     <script src="js/main.js"></script>
   </body>
 </html>

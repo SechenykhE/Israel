@@ -2,7 +2,6 @@
 
 (function () {
 
-  // localStorage и маска на телефон
   var modalOrder = document.querySelector('.js-order');
   var modalSuccess = document.querySelector('.js-success');
   var userName = modalOrder.querySelector('[name=user-name]');
@@ -12,6 +11,8 @@
   var storageName = '';
   var storagePhone = '';
 
+  var TEL_LENGTH = 11;
+
   try {
     storageName = localStorage.getItem('userName');
     storagePhone = localStorage.getItem('userPhone');
@@ -19,6 +20,39 @@
     isStorageSupport = false;
   }
 
+// Валидация телефона
+  var inputsTel = document.querySelectorAll('.js-tel');
+
+  var validateTel = function (element) {
+    window.iMaskJS(element, {
+      min: 110,
+      mask: '+7 (000) 000 00 00',
+    });
+  };
+
+  inputsTel.forEach(function (input) {
+    validateTel(input);
+  });
+
+  inputsTel.forEach(function (input) {
+    input.addEventListener('input', function () {
+      if (input.value !== '') {
+        input.classList.add('form__input--error');
+      } else {
+        input.classList.remove('form__input--error');
+      }
+
+      var inputLength = input.value.replace(/\D+/g, '').length;
+      if (inputLength < TEL_LENGTH) {
+        input.classList.add('form__input--error');
+        input.setCustomValidity('Введите телефонный номер полностью')
+      } else {
+        input.classList.remove('form__input--error');
+        input.classList.add('form__input--success');
+        input.setCustomValidity('')
+      }
+    });
+  });
 
   // открытие и закрытие модальных окон
   var buttonOrder = document.querySelector('.header__call-order');
@@ -106,7 +140,22 @@
       closeOpenedModal();
       showModal(modalSuccess);
     }
+  });
 
+  var wantGoForm = document.querySelector('.form--want-go');
+  var contactsForm = document.querySelector('.form--contacts')
+
+  wantGoForm.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    localStorage.setItem('userPhone', userPhone.value);
+    showModal(modalSuccess);
+  });
+
+  contactsForm.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    localStorage.setItem('userName', userName.value);
+    localStorage.setItem('userPhone', userPhone.value);
+    showModal(modalSuccess);
   });
 
   // tabs
@@ -131,7 +180,7 @@
 
   // Swiper
 
-  /*var liveIsrael = document.querySelector('.live-israel');
+  /* var liveIsrael = document.querySelector('.live-israel');
   var liveSwiper = null;
 
   /!*liveIsrael.classList.remove('live--no-js');*!/
