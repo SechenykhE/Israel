@@ -66,23 +66,25 @@
         <div class="programs__inner">
           <h2>программы</h2>
           <div class="programs__wrapper">
-            <ul class="programs__list">
-              <li class="programs__item programs__item--general">
-                <button>Общие</button>
-              </li>
-              <li class="programs__item programs__item--academy programs__item--active">
-                <button>Академические</button>
-              </li>
-              <li class="programs__item programs__item--intern">
-                <button>Стажировки</button>
-              </li>
-              <li class="programs__item programs__item--volunteer">
-                <button>Волонтёрство</button>
-              </li>
-              <li class="programs__item programs__item--religion">
-                <button>Религиозные</button>
-              </li>
-            </ul>
+            <div class="programs__swiper swiper-container">
+              <ul class="programs__list swiper-wrapper">
+                <li class="programs__item programs__item--general swiper-slide">
+                  <button>Общие</button>
+                </li>
+                <li class="programs__item programs__item--academy programs__item--active swiper-slide">
+                  <button>Академические</button>
+                </li>
+                <li class="programs__item programs__item--intern swiper-slide">
+                  <button>Стажировки</button>
+                </li>
+                <li class="programs__item programs__item--volunteer swiper-slide">
+                  <button>Волонтёрство</button>
+                </li>
+                <li class="programs__item programs__item--religion swiper-slide">
+                  <button>Религиозные</button>
+                </li>
+              </ul>
+            </div>
             <div class="programs__text-wrapper">
               <div class="programs__text programs__text--active">
                 <h3>Общие</h3>
@@ -132,7 +134,7 @@
             <form class="form form--want-go" action="https://echo.htmlacademy.ru" method="post">
               <p>
                 <input class="form__input js-tel" id="want-go-phone" type="tel" name="user-phone" placeholder="телефон" required>
-                <label  for="want-go-phone"><span class="visually-hidden">Ваш телефон</span></label>
+                <label for="want-go-phone"><span class="visually-hidden">Ваш телефон</span></label>
               </p>
               <button class="button" type="submit">перезвоните мне</button>
             </form>
@@ -176,7 +178,7 @@
                   <img src="img/excursion-desktop@1x.png" srcset=" img/excursion-desktop@1x.png 1x, img/excursion-desktop@2x.png 2x" width="482" height="732" alt="Экскурсия по Израилю">
                 </picture>
               </div>
-              <div class="live-israel__wrapper live-israel__wrapper--right">
+              <div class="live-israel__wrapper-right">
                 <div class="live-israel__item live-israel__item--study swiper-slide">
                   <p>Изучение иврита</p>
                   <picture>
@@ -282,7 +284,7 @@
           <h2>Отзывы</h2>
           <div class="reviews__swiper swiper-container">
             <div class="reviews__list swiper-wrapper">
-              <div class="reviews__item swiper-slide reviews__item--active">
+              <div class="reviews__item swiper-slide">
                 <div class="reviews__img">
                   <picture>
                     <!-- 1x: 240px 2x: 480px -->
@@ -324,6 +326,11 @@
                       </a>
                     </li>
                   </ul>
+                  <div class="reviews__control">
+                    <p>
+                      <span class="reviews__control-active">1</span> / <span class="reviews__control-all">6</span>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="reviews__item swiper-slide">
@@ -368,6 +375,11 @@
                       </a>
                     </li>
                   </ul>
+                  <div class="reviews__control">
+                    <p>
+                      <span class="reviews__control-active">2</span> / <span class="reviews__control-all">6</span>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="reviews__item swiper-slide">
@@ -412,6 +424,11 @@
                       </a>
                     </li>
                   </ul>
+                  <div class="reviews__control">
+                    <p>
+                      <span class="reviews__control-active">3</span> / <span class="reviews__control-all">6</span>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="reviews__item swiper-slide">
@@ -456,6 +473,11 @@
                       </a>
                     </li>
                   </ul>
+                  <div class="reviews__control">
+                    <p>
+                      <span class="reviews__control-active">4</span> / <span class="reviews__control-all">6</span>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="reviews__item swiper-slide">
@@ -500,6 +522,11 @@
                       </a>
                     </li>
                   </ul>
+                  <div class="reviews__control">
+                    <p>
+                      <span class="reviews__control-active">5</span> / <span class="reviews__control-all">6</span>
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="reviews__item swiper-slide">
@@ -544,18 +571,19 @@
                       </a>
                     </li>
                   </ul>
+                  <div class="reviews__control">
+                    <p>
+                      <span class="reviews__control-active">6</span> / <span class="reviews__control-all">6</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="reviews__control swiper-pagination">
-              <p>
-                <span class="reviews__control-active">3</span> / <span class="reviews__control-all">6</span>
-              </p>
-              <div class="reviews__button">
-                <button class="reviews__button-left" type="button"><span class="visually-hidden">назад</span></button>
-                <button class="reviews__button-right" type="button"><span class="visually-hidden">вперед</span></button>
-              </div>
+            <div class="reviews__button">
+              <div class="reviews__button-left swiper-button-prev"><span class="visually-hidden">назад</span></div>
+              <div class="reviews__button-right swiper-button-next"><span class="visually-hidden">вперед</span></div>
             </div>
+
           </div>
         </div>
       </section>
@@ -632,10 +660,14 @@
             <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
           </div>
           <form class="form form--contacts" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="contacts-name">Ваше имя:</label>
-            <input class="form__input" id="contacts-name" type="text" name="user-name" placeholder="Имя" required>
-            <label class="visually-hidden" for="contacts-phone">Ваш телефон</label>
-            <input class="form__input js-tel" id="contacts-phone" type="tel" name="user-phone" placeholder="телефон" required>
+            <p>
+              <input class="form__input js-name" id="contacts-name" type="text" name="user-name" placeholder="Имя" required>
+              <label for="contacts-name"><span class="visually-hidden">Ваше имя</span></label>
+            </p>
+            <p>
+              <input class="form__input js-tel" id="contacts-phone" type="tel" name="user-phone" placeholder="телефон" required>
+              <label for="contacts-phone"><span class="visually-hidden">Ваш телефон</span></label>
+            </p>
 
             <button class="button" type="submit">перезвоните мне</button>
           </form>
@@ -687,11 +719,14 @@
         <h2>Заказать звонок</h2>
         <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
         <form class="modal-order__form form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="input-name">Ваше имя:</label>
-          <input class="form__input" id="input-name" type="text" name="user-name" placeholder="Имя" required>
-          <label class="visually-hidden" for="input-phone">Ваш телефон</label>
-          <input class="form__input js-tel" id="input-phone" type="tel" name="user-phone" placeholder="телефон" required>
-
+          <p>
+            <input class="form__input js-name" id="input-name" type="text" name="user-name" placeholder="Имя" required>
+            <label for="input-name"><span class="visually-hidden">Ваше имя</span></label>
+          </p>
+          <p>
+            <input class="form__input form__input--phone js-tel" id="input-phone" type="tel" name="user-phone" placeholder="телефон" required>
+            <label for="input-phone"><span class="visually-hidden">Ваш телефон</span></label>
+          </p>
           <button class="button" type="submit">перезвоните мне</button>
 
           <div class="form__check">
@@ -713,7 +748,6 @@
     </section>
 
     <script src="js/vendor.js"></script>
-    <!--<script src="js/swiper.js"></script>-->
     <script src="js/main.js"></script>
   </body>
 </html>

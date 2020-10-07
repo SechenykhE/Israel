@@ -1,8 +1,9 @@
 //вариант 2
 
-/*.form p {
+.form p {
+  @include reset;
+
   position: relative;
-  padding: 2px;
 }
 
 .form__input {
@@ -12,8 +13,8 @@
 
   position: relative;
   z-index: 1;
-  !*top: 2px;
-  left: 2px;*!
+  top: 2px;
+  left: 2px;
   width: calc(100% - 4px);
   height: 55px;
   margin-bottom: 8px;
@@ -21,134 +22,36 @@
 
   font-variant: small-caps;
 
-  color: $text-color;
-  opacity: 0.87;
+  color: rgba($text-color, 0.87);
   border: 2px solid transparent;
-  !*border: 2px solid #e3e3e3;*!
   border-radius: 80px;
   background: $second-color;
 
   &::placeholder {
-    @include text(17px, 1.18, 500);
+    @include text(17px, 1.1, 500);
 
     font-variant: small-caps;
     color: rgba($text-color, 0.5);
-    background: $second-color;
   }
 }
+
 .form__input + label::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
   z-index: 0;
 
-    width: 100%;
-    height: 59px;
+  width: 100%;
+  height: 59px;
   padding: 2px;
-    background: #e3e3e3;
-    border-radius: 80px;
-  }
-
-.form__input:hover + label::before {
- background: $gradient;
-}*/
-
-// вариант1
-
-/*.form p {
-  @include reset;
-
-  padding: 2px;
+  background: #e3e3e3;
   border-radius: 80px;
-  overflow: hidden;
+}
+
+.form__input:hover + label::before,
+.form__input:focus + label::before {
   background: $gradient;
-}
-
-.form input {
-  @include cursor-hover;
-  @include text(17px, 1.18, 500);
-  @include animation;
-
-  width: 100%;
-  height: 59px;
-  margin-bottom: 8px;
-  padding: 18px 38px;
-
-  font-variant: small-caps;
-
-  color: rgba($text-color, 0.87);
-  border: 2px solid transparent;
-  !*border: 2px solid #e3e3e3;*!
-  border-radius: 80px;
-  background: $second-color;
-
-
-  &::placeholder {
-    @include text(17px, 1.18, 500);
-
-    font-variant: small-caps;
-    color: $text-color;
-    opacity: 0.5;
-  }
-}
-
-!*.form__input:hover,
-.form__input:focus {
-  @include animation;
-
-  border: 2px solid transparent;
-  border-image: $gradient 1;
-  border-radius: 80px;
-}*!*/
-
-// вариант исходный
-.form input {
-  @include cursor-hover;
-  @include text(17px, 1.18, 500);
-  @include animation;
-
-  width: 100%;
-  height: 59px;
-  margin-bottom: 8px;
-  padding: 18px 38px;
-
-  font-variant: small-caps;
-
-  color: $text-color;
-  opacity: 0.87;
-  border: 2px solid #e3e3e3;
-  border-radius: 80px;
-
-
-  &::placeholder {
-    @include text(17px, 1.18, 500);
-
-    font-variant: small-caps;
-    color: $text-color;
-    opacity: 0.5;
-  }
-}
-
-/*
-.form__input[type="tel"] {
-  text-decoration: underline rgba($text-color, 0.2);
-}
-*/
-
-.form p {
-  @include reset;
-  border-radius: 80px;
-  overflow: hidden;
-}
-
-.form__input:hover,
-.form__input:focus {
-  @include animation;
-
-  border: 2px solid transparent;
-  border-image: $gradient 1;
-  border-radius: 80px;
 }
 
 .form button {
@@ -158,12 +61,12 @@
   margin-bottom: 15px;
 }
 
-.form__input--error {
-  border-color: $error-color;
+.form__input--error + label::before {
+  background: rgba($error-color, 0.5);
 }
 
-.form__input--success {
-  border-color: $text-color;
+.form__input--success + label::before {
+  background: rgba($text-color, 0.5);
 }
 
 .form__check {
@@ -230,7 +133,7 @@
 }
 
 .form--want-go input {
-  max-width: 477px;
+  max-width: 473px;
   padding-right: 45%;
   margin: 0;
 }
@@ -238,7 +141,7 @@
 .form--want-go button {
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 53%;
   transform: translateY(-50%);
   right: 0;
   width: 216px;
@@ -250,7 +153,7 @@
   margin-top: -4px;
 }
 
-.form--contacts input {
+.form--contacts p {
   width: 250px;
   margin-right: 3.3%;
 }
@@ -268,7 +171,7 @@
     max-width: 767px;
   }
 
-  .form--contacts input {
+  .form--contacts p {
     width: 100%;
     max-width: 767px;
     margin-right: 0;
@@ -280,6 +183,10 @@
     margin-top: 16px;
     margin-left: 0;
     margin-bottom: 16px;
+  }
+
+  .form__input {
+    left: 0;
   }
 
   .form__check {
@@ -299,11 +206,11 @@
   }
 
   .form--want-go p {
-    width: 100%;
+    max-width: 477px;
   }
 
-  .form--want-go input {
-    width: 100%;
+  .form--want-go .form__input {
+    left: 2px;
     margin-bottom: 10px;
   }
 
@@ -319,9 +226,12 @@
     align-items: center;
   }
 
-  .form--contacts input {
-    width: 100%;
+  .form--contacts p {
     margin-right: 0;
+  }
+
+  .form--contacts input {
+    left: 2px;
   }
 
   .form--contacts button {

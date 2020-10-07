@@ -1316,6 +1316,10 @@ a.button:active {
   color: #1fc0fc;
   margin-bottom: 65px; }
 
+.programs__swiper {
+  margin-left: 0;
+  margin-right: 0; }
+
 .programs__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1325,6 +1329,10 @@ a.button:active {
   margin: 0;
   padding: 0;
   list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 64px; }
 
 .programs__item {
@@ -1608,6 +1616,10 @@ a.button:active {
     color: #1fc0fc;
     text-align: center;
     margin-bottom: 13px; }
+  /*.programs__swiper {
+    width: 320px;
+    height: 48px;
+  }*/
   .programs__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1617,8 +1629,15 @@ a.button:active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    overflow: hidden; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*width: 100%;
+    overflow: hidden;*/ }
   .programs__text-wrapper {
     width: 100%;
     padding-top: 34px; }
@@ -1636,6 +1655,7 @@ a.button:active {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     width: auto;
+    max-width: 181px;
     height: 48px; }
   .programs__item--general::before,
   .programs__item--academy::before,
@@ -1675,7 +1695,7 @@ a.button:active {
   .programs__item.programs__item--active button {
     width: 181px; }
   .programs__item--active::after {
-    top: 2px;
+    top: 0;
     left: 0;
     width: 181px;
     height: 48px;
@@ -1791,179 +1811,81 @@ a.button:active {
     line-height: 1.6;
     font-weight: 400;
     width: 100%;
-    margin-bottom: 49px;
+    margin-bottom: 25px;
     margin-right: auto;
     margin-left: auto; } }
 
-/*.form p {
-  position: relative;
-  padding: 2px;
-}
+.form p {
+  margin: 0;
+  padding: 0;
+  position: relative; }
 
 .form__input {
-  @include cursor-hover;
-  @include text(17px, 1.18, 500);
-  @include animation;
-
-  position: relative;
-  z-index: 1;
-  !*top: 2px;
-  left: 2px;*!
-  width: calc(100% - 4px);
-  height: 55px;
-  margin-bottom: 8px;
-  padding: 18px 38px;
-
-  font-variant: small-caps;
-
-  color: $text-color;
-  opacity: 0.87;
-  border: 2px solid transparent;
-  !*border: 2px solid #e3e3e3;*!
-  border-radius: 80px;
-  background: $second-color;
-
-  &::placeholder {
-    @include text(17px, 1.18, 500);
-
-    font-variant: small-caps;
-    color: rgba($text-color, 0.5);
-    background: $second-color;
-  }
-}
-.form__input + label::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-  z-index: 0;
-
-    width: 100%;
-    height: 59px;
-  padding: 2px;
-    background: #e3e3e3;
-    border-radius: 80px;
-  }
-
-.form__input:hover + label::before {
- background: $gradient;
-}*/
-/*.form p {
-  @include reset;
-
-  padding: 2px;
-  border-radius: 80px;
-  overflow: hidden;
-  background: $gradient;
-}
-
-.form input {
-  @include cursor-hover;
-  @include text(17px, 1.18, 500);
-  @include animation;
-
-  width: 100%;
-  height: 59px;
-  margin-bottom: 8px;
-  padding: 18px 38px;
-
-  font-variant: small-caps;
-
-  color: rgba($text-color, 0.87);
-  border: 2px solid transparent;
-  !*border: 2px solid #e3e3e3;*!
-  border-radius: 80px;
-  background: $second-color;
-
-
-  &::placeholder {
-    @include text(17px, 1.18, 500);
-
-    font-variant: small-caps;
-    color: $text-color;
-    opacity: 0.5;
-  }
-}
-
-!*.form__input:hover,
-.form__input:focus {
-  @include animation;
-
-  border: 2px solid transparent;
-  border-image: $gradient 1;
-  border-radius: 80px;
-}*!*/
-.form input {
   cursor: url("../img/pointer-hand.svg"), pointer;
   font-size: 17px;
   line-height: 1.18;
   font-weight: 500;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  width: 100%;
-  height: 59px;
+  position: relative;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: 55px;
   margin-bottom: 8px;
   padding: 18px 38px;
   font-variant: small-caps;
-  color: #484848;
-  opacity: 0.87;
-  border: 2px solid #e3e3e3;
-  border-radius: 80px; }
-  .form input::-webkit-input-placeholder {
-    font-size: 17px;
-    line-height: 1.18;
-    font-weight: 500;
-    font-variant: small-caps;
-    color: #484848;
-    opacity: 0.5; }
-  .form input::-moz-placeholder {
-    font-size: 17px;
-    line-height: 1.18;
-    font-weight: 500;
-    font-variant: small-caps;
-    color: #484848;
-    opacity: 0.5; }
-  .form input:-ms-input-placeholder {
-    font-size: 17px;
-    line-height: 1.18;
-    font-weight: 500;
-    font-variant: small-caps;
-    color: #484848;
-    opacity: 0.5; }
-  .form input::-ms-input-placeholder {
-    font-size: 17px;
-    line-height: 1.18;
-    font-weight: 500;
-    font-variant: small-caps;
-    color: #484848;
-    opacity: 0.5; }
-  .form input::placeholder {
-    font-size: 17px;
-    line-height: 1.18;
-    font-weight: 500;
-    font-variant: small-caps;
-    color: #484848;
-    opacity: 0.5; }
-
-/*
-.form__input[type="tel"] {
-  text-decoration: underline rgba($text-color, 0.2);
-}
-*/
-.form p {
-  margin: 0;
-  padding: 0;
-  border-radius: 80px;
-  overflow: hidden; }
-
-.form__input:hover,
-.form__input:focus {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  color: rgba(72, 72, 72, 0.87);
   border: 2px solid transparent;
-  -o-border-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%) 1;
-     border-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%) 1;
+  border-radius: 80px;
+  background: #ffffff; }
+  .form__input::-webkit-input-placeholder {
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 500;
+    font-variant: small-caps;
+    color: rgba(72, 72, 72, 0.5); }
+  .form__input::-moz-placeholder {
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 500;
+    font-variant: small-caps;
+    color: rgba(72, 72, 72, 0.5); }
+  .form__input:-ms-input-placeholder {
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 500;
+    font-variant: small-caps;
+    color: rgba(72, 72, 72, 0.5); }
+  .form__input::-ms-input-placeholder {
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 500;
+    font-variant: small-caps;
+    color: rgba(72, 72, 72, 0.5); }
+  .form__input::placeholder {
+    font-size: 17px;
+    line-height: 1.1;
+    font-weight: 500;
+    font-variant: small-caps;
+    color: rgba(72, 72, 72, 0.5); }
+
+.form__input + label::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 59px;
+  padding: 2px;
+  background: #e3e3e3;
   border-radius: 80px; }
+
+.form__input:hover + label::before,
+.form__input:focus + label::before {
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); }
 
 .form button {
   width: 264px;
@@ -1971,11 +1893,11 @@ a.button:active {
   margin-left: 25px;
   margin-bottom: 15px; }
 
-.form__input--error {
-  border-color: #ff0000; }
+.form__input--error + label::before {
+  background: rgba(255, 0, 0, 0.5); }
 
-.form__input--success {
-  border-color: #484848; }
+.form__input--success + label::before {
+  background: rgba(72, 72, 72, 0.5); }
 
 .form__check {
   position: relative;
@@ -2030,14 +1952,14 @@ a.button:active {
   position: relative; }
 
 .form--want-go input {
-  max-width: 477px;
+  max-width: 473px;
   padding-right: 45%;
   margin: 0; }
 
 .form--want-go button {
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 53%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 0;
@@ -2050,7 +1972,7 @@ a.button:active {
   display: flex;
   margin-top: -4px; }
 
-.form--contacts input {
+.form--contacts p {
   width: 250px;
   margin-right: 3.3%; }
 
@@ -2070,7 +1992,7 @@ a.button:active {
         -ms-flex-align: center;
             align-items: center;
     max-width: 767px; }
-  .form--contacts input {
+  .form--contacts p {
     width: 100%;
     max-width: 767px;
     margin-right: 0; } }
@@ -2080,6 +2002,8 @@ a.button:active {
     margin-top: 16px;
     margin-left: 0;
     margin-bottom: 16px; }
+  .form__input {
+    left: 0; }
   .form__check {
     position: relative;
     left: 50%;
@@ -2100,9 +2024,9 @@ a.button:active {
         -ms-flex-align: center;
             align-items: center; }
   .form--want-go p {
-    width: 100%; }
-  .form--want-go input {
-    width: 100%;
+    max-width: 477px; }
+  .form--want-go .form__input {
+    left: 2px;
     margin-bottom: 10px; }
   .form--want-go button {
     position: static;
@@ -2118,9 +2042,10 @@ a.button:active {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .form--contacts input {
-    width: 100%;
+  .form--contacts p {
     margin-right: 0; }
+  .form--contacts input {
+    left: 2px; }
   .form--contacts button {
     width: 264px; } }
 
@@ -2412,7 +2337,10 @@ a.button:active {
   width: 100%;
   margin-top: -20px; }
 
-.live-israel__wrapper--right {
+.live-israel__wrapper-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 56.5%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2497,18 +2425,16 @@ a.button:active {
   .live-israel__inner {
     padding-top: 5px;
     padding-bottom: 20px; }
-  .live-israel__wrapper {
+  .live-israel__swiper {
+    width: 288px;
+    height: 424px; }
+  .live-israel__wrapper,
+  .live-israel__wrapper-right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    height: auto;
-    margin-top: 0;
-    overflow: hidden; }
-  .live-israel__swiper {
-    position: relative;
-    width: 288px;
-    height: 424px; }
+    margin-top: 0; }
   .live-israel h2 {
     font-size: 32px;
     line-height: 1.22;
@@ -2527,14 +2453,11 @@ a.button:active {
     margin-bottom: 23px;
     text-align: left; }
   .live-israel__item {
-    /*display: none;*/
     width: 100%; }
-  /* .live-israel__item--active {
-    display: block;
-  }*/
   .live-israel__item--excursion,
   .live-israel__wrapper--right {
-    width: 103.4%; }
+    width: 100%;
+    /* width: 103.4%;*/ }
   .live-israel__item.live-israel__item--excursion p,
   .live-israel__item.live-israel__item--study p,
   .live-israel__item.live-israel__item--teach p,
@@ -2902,7 +2825,7 @@ a.button:active {
       background-image: url("../img/sketch-city-desktop@2x.png"), url("../img/reviews-bg-desktop@2x.png"); } }
 
 .reviews__inner {
-  padding-top: 126px;
+  padding-top: 22px;
   padding-bottom: 30px; }
 
 .reviews h2 {
@@ -2922,9 +2845,6 @@ a.button:active {
   position: relative; }
 
 .reviews__item {
-  display: none; }
-
-.reviews__item--active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -2978,7 +2898,7 @@ a.button:active {
   line-height: 1.5;
   font-weight: 400;
   display: block;
-  margin-bottom: 56px;
+  margin-bottom: 51px;
   text-decoration: underline;
   color: #1fc0fc; }
 
@@ -3015,10 +2935,14 @@ a.button:active {
   margin-right: 23px; }
 
 .reviews__button {
-  position: relative;
-  width: 44px; }
+  cursor: url("../img/pointer-hand.svg"), pointer;
+  position: absolute;
+  width: 44px;
+  height: 18px;
+  left: 39.3%;
+  bottom: 70px; }
 
-.reviews__button button {
+.reviews__button div {
   cursor: url("../img/pointer-hand.svg"), pointer;
   width: 15px;
   height: 18px;
@@ -3027,18 +2951,19 @@ a.button:active {
 
 .reviews__button-left::before,
 .reviews__button-right::before {
+  cursor: url("../img/pointer-hand.svg"), pointer;
   position: absolute;
   content: "";
   width: 15px;
   height: 18px; }
 
-button.reviews__button-left::before {
+.reviews__button-left::before {
   top: 3px;
   left: 0;
   background: url("../img/icon-arrow-left.svg");
   background-repeat: no-repeat; }
 
-button.reviews__button-right::before {
+.reviews__button-right::before {
   top: 3px;
   right: 0;
   background: url("../img/icon-arrow-right.svg");
@@ -3120,7 +3045,7 @@ button.reviews__button-right::before {
             justify-content: flex-start;
     margin-left: -4px; }
   .reviews__control {
-    left: 50%;
+    left: 42%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     top: 338px;
@@ -3137,7 +3062,10 @@ button.reviews__button-right::before {
     font-weight: 400;
     color: rgba(72, 72, 72, 0.5); }
   .reviews__control p {
-    margin-right: 23px; } }
+    margin-right: 23px; }
+  .reviews__button {
+    left: 53.3%;
+    top: 340px; } }
 
 .contacts {
   padding-bottom: 71px;

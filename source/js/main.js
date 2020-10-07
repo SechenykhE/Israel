@@ -1,6 +1,9 @@
 'use strict';
 
 (function () {
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
 
   var modalOrder = document.querySelector('.js-order');
   var modalSuccess = document.querySelector('.js-success');
@@ -22,6 +25,18 @@
 
   // Валидация телефона
   var inputsTel = document.querySelectorAll('.js-tel');
+  var inputsName = document.querySelectorAll('.js-name');
+
+  inputsName.forEach(function (input) {
+    input.addEventListener('input', function () {
+      if (input.value === '') {
+        input.classList.add('form__input--error');
+      } else {
+        input.classList.remove('form__input--error');
+        input.classList.add('form__input--success');
+      }
+    });
+  });
 
   var validateTel = function (element) {
     window.iMaskJS(element, {
@@ -36,11 +51,6 @@
 
   inputsTel.forEach(function (input) {
     input.addEventListener('input', function () {
-      if (input.value !== '') {
-        input.classList.add('form__input--error');
-      } else {
-        input.classList.remove('form__input--error');
-      }
 
       var inputLength = input.value.replace(/\D+/g, '').length;
       if (inputLength < TEL_LENGTH) {
@@ -180,15 +190,15 @@
 
   // Swiper
 
-  /* var liveIsrael = document.querySelector('.live-israel');
-  var liveSwiper = null;
+  var liveSlider = null;
+  var programsSlider = null;
 
-  /!*liveIsrael.classList.remove('live--no-js');*!/
-
-  var activeSwiper = function () {
-    liveSwiper = new Swiper('.live-israel__swiper', {
+  var liveSwiper = function () {
+    liveSlider = new Swiper('.live-israel__swiper', {
       direction: 'horizontal',
+      slidesPerView: 1,
       loop: true,
+      centerSlides: true,
       autoplay: {
         delay: 4000,
       },
@@ -201,19 +211,46 @@
     });
   };
 
+  var programsSwiper = function () {
+    programsSlider = new Swiper('.programs__swiper', {
+      direction: 'horizontal',
+      slidesPerView: 3,
+      loop: true,
+      centerSlides: true
+    });
+  };
+
+  var reviewsSwiper = new Swiper('.reviews__swiper', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    loop: true,
+    centerSlides: true,
+
+    navigation: {
+      nextEl: '.reviews__button-right',
+      prevEl: '.reviews__button-left',
+    },
+  });
+
+  reviewsSwiper();
+
   if (window.matchMedia('(max-width: 767px)').matches) {
-    activeSwiper();
+    liveSwiper();
+    programsSwiper();
   }
 
   window.addEventListener('resize', function () {
     var viewport = document.documentElement.clientWidth;
-    if (viewport < 768 && !liveSwiper) {
-      activeSwiper();
-    } else if (viewport >= 768 && liveSwiper) {
-      liveSwiper.destroy();
-      liveSwiper = null;
+    if (viewport < 768 && !liveSlider) {
+      liveSwiper();
+      programsSwiper();
+    } else if (viewport >= 768 && liveSlider) {
+      liveSlider.destroy();
+      liveSlider = null;
+      programsSlider.destroy();
+      programsSlider = null;
     }
-  });*/
+  });
 
   // question
 
@@ -232,6 +269,6 @@
     });
   });
 
-  /* window.vendor.svg4everybody();*/
-  /* window.vendor.Swiper();*/
+  window.vendor.svg4everybody();
+  window.vendor.swiper();
 })();

@@ -47,7 +47,8 @@
   margin-top: -20px;
 }
 
-.live-israel__wrapper--right {
+.live-israel__wrapper-right {
+  display: flex;
   width: 56.5%;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -154,21 +155,17 @@
     padding-bottom: 20px;
   }
 
-  .live-israel__wrapper {
-    display: flex;
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-
-    overflow: hidden;
-  }
-
   .live-israel__swiper {
-    position: relative;
     width: 288px;
     height: 424px;
   }
 
+  .live-israel__wrapper,
+  .live-israel__wrapper-right {
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+  }
 
   .live-israel h2 {
     @include title-mobile;
@@ -187,17 +184,13 @@
   }
 
   .live-israel__item {
-    /*display: none;*/
     width: 100%;
   }
 
-  /* .live-israel__item--active {
-    display: block;
-  }*/
-
   .live-israel__item--excursion,
   .live-israel__wrapper--right {
-    width: 103.4%;
+    width: 100%;
+    /* width: 103.4%;*/
   }
 
   .live-israel__item.live-israel__item--excursion p,

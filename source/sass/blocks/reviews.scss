@@ -11,7 +11,7 @@
 }
 
 .reviews__inner {
-  padding-top: 126px;
+  padding-top: 22px;
   padding-bottom: 30px;
 }
 
@@ -27,10 +27,6 @@
 }
 
 .reviews__item {
-  display: none;
-}
-
-.reviews__item--active {
   display: flex;
 }
 
@@ -84,7 +80,7 @@
   @include text(17px, 1.5, 400);
 
   display: block;
-  margin-bottom: 56px;
+  margin-bottom: 51px;
   text-decoration: underline;
   color: $first-color;
 }
@@ -118,11 +114,16 @@
 }
 
 .reviews__button {
-  position: relative;
+  @include cursor-hover;
+
+  position: absolute;
   width: 44px;
+  height: 18px;
+  left: 39.3%;
+  bottom: 70px;
 }
 
-.reviews__button button {
+.reviews__button div {
   @include cursor-hover;
 
   width: 15px;
@@ -134,13 +135,15 @@
 
 .reviews__button-left::before,
 .reviews__button-right::before {
+  @include cursor-hover;
+
   position: absolute;
   content: "";
   width: 15px;
   height: 18px;
 }
 
-button.reviews__button-left::before {
+.reviews__button-left::before {
   top: 3px;
   left: 0;
 
@@ -148,7 +151,7 @@ button.reviews__button-left::before {
   background-repeat: no-repeat;
 }
 
-button.reviews__button-right::before {
+.reviews__button-right::before {
   top: 3px;
   right: 0;
 
@@ -233,7 +236,7 @@ button.reviews__button-right::before {
   }
 
   .reviews__control {
-    left: 50%;
+    left: 42%;
     transform: translateX(-50%);
     top: 338px;
 
@@ -251,5 +254,10 @@ button.reviews__button-right::before {
 
   .reviews__control p {
     margin-right: 23px;
+  }
+
+  .reviews__button {
+    left: 53.3%;
+    top: 340px;
   }
 }

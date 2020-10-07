@@ -26,6 +26,11 @@
   margin-bottom: 65px;
 }
 
+.programs__swiper {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .programs__wrapper {
   display: flex;
 }
@@ -33,6 +38,7 @@
 .programs__list {
   @include list-reset;
 
+  flex-direction: column;
   margin-right: 64px;
 }
 
@@ -357,14 +363,21 @@
     margin-bottom: 13px;
   }
 
+  /*.programs__swiper {
+    width: 320px;
+    height: 48px;
+  }*/
+
   .programs__wrapper {
     flex-direction: column;
   }
 
   .programs__list {
     display: flex;
-    width: 100%;
-    overflow: hidden;
+    flex-direction: row;
+    align-items: center;
+    /*width: 100%;
+    overflow: hidden;*/
   }
 
   .programs__text-wrapper {
@@ -387,6 +400,7 @@
   .programs__item {
     flex-shrink: 0;
     width: auto;
+    max-width: 181px;
     height: 48px;
   }
 
@@ -438,7 +452,7 @@
   }
 
   .programs__item--active::after {
-    top: 2px;
+    top: 0;
     left: 0;
     width: 181px;
     height: 48px;
