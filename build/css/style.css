@@ -1616,10 +1616,6 @@ a.button:active {
     color: #1fc0fc;
     text-align: center;
     margin-bottom: 13px; }
-  /*.programs__swiper {
-    width: 320px;
-    height: 48px;
-  }*/
   .programs__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1636,8 +1632,7 @@ a.button:active {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    /*width: 100%;
-    overflow: hidden;*/ }
+    width: 100%; }
   .programs__text-wrapper {
     width: 100%;
     padding-top: 34px; }
@@ -1652,10 +1647,10 @@ a.button:active {
     font-weight: 400;
     width: 100%; }
   .programs__item {
+    display: inline-block;
+    vertical-align: center;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    width: auto;
-    max-width: 181px;
     height: 48px; }
   .programs__item--general::before,
   .programs__item--academy::before,
@@ -2060,7 +2055,7 @@ a.button:active {
       background-image: url("../img/how-to-go-people-desktop@2x.png"), url("../img/stamp-desktop@2x.png"), url("/../img/how-to-go-bg-desktop@2x.png"); } }
 
 .how-go__inner {
-  padding-top: 192px;
+  padding-top: 195px;
   padding-bottom: 100px;
   padding-right: calc(8.1% + 34px); }
 
@@ -2328,26 +2323,12 @@ a.button:active {
   text-align: center; }
 
 .live-israel__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
   margin-top: -20px; }
-
-.live-israel__wrapper-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 56.5%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 5.8%; }
 
 .live-israel__item {
   position: relative;
@@ -2359,16 +2340,25 @@ a.button:active {
     width: 41.8%;
     margin-right: 1.3%; }
   .live-israel__item--study {
-    width: 32.5%;
-    margin-left: -4px; }
+    position: absolute;
+    top: 8.9%;
+    left: 43.1%;
+    width: 18.3%; }
   .live-israel__item--teach {
-    width: 62.9%;
-    margin-right: 5px; }
+    position: absolute;
+    top: 8.9%;
+    left: 64%;
+    width: 35.7%; }
   .live-israel__item--together {
-    width: 62.9%;
-    margin-left: -4px; }
+    position: absolute;
+    top: 54.7%;
+    left: 43.1%;
+    width: 35.7%; }
   .live-israel__item--leader {
-    width: 32.8%; }
+    position: absolute;
+    top: 54.7%;
+    left: 81.4%;
+    width: 18.6%; }
 
 .live-israel__item img {
   width: 100%; }
@@ -2381,7 +2371,7 @@ a.button:active {
   font-weight: 800;
   position: absolute;
   left: 8%;
-  bottom: 33px;
+  bottom: 32px;
   width: 81%;
   font-family: "Raleway", "Arial", sans-serif;
   color: #ffffff;
@@ -2389,20 +2379,16 @@ a.button:active {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
 
 .live-israel__item.live-israel__item--study p {
-  bottom: 46px;
   left: 11.5%; }
 
 .live-israel__item.live-israel__item--teach p {
-  bottom: 46px;
   left: 7.8%; }
 
 .live-israel__item.live-israel__item--together p {
-  bottom: 43px;
   left: 7.8%;
   width: 88%; }
 
 .live-israel__item.live-israel__item--leader p {
-  bottom: 43px;
   left: 11.5%; }
 
 @media (max-width: 1023px) {
@@ -2426,13 +2412,11 @@ a.button:active {
     padding-top: 5px;
     padding-bottom: 20px; }
   .live-israel__swiper {
+    position: relative;
     width: 288px;
-    height: 424px; }
-  .live-israel__wrapper,
-  .live-israel__wrapper-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    height: 428px;
+    overflow: hidden; }
+  .live-israel__wrapper {
     width: 100%;
     margin-top: 0; }
   .live-israel h2 {
@@ -2454,10 +2438,15 @@ a.button:active {
     text-align: left; }
   .live-israel__item {
     width: 100%; }
-  .live-israel__item--excursion,
-  .live-israel__wrapper--right {
-    width: 100%;
-    /* width: 103.4%;*/ }
+  .live-israel__item.live-israel__item--excursion,
+  .live-israel__item.live-israel__item--study,
+  .live-israel__item.live-israel__item--teach,
+  .live-israel__item.live-israel__item--together,
+  .live-israel__item.live-israel__item--leader {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; }
   .live-israel__item.live-israel__item--excursion p,
   .live-israel__item.live-israel__item--study p,
   .live-israel__item.live-israel__item--teach p,
@@ -2469,19 +2458,37 @@ a.button:active {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: 0.5%;
+    bottom: 4%;
     width: 85%;
     margin-right: auto;
     margin-left: auto;
     text-align: center; }
   .live-israel__control {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .live-israel__swiper > .live-israel__control {
+    bottom: 2px;
+    left: 4px; }
+  .live-israel__control--bullet {
+    display: block;
     width: 6px;
     height: 6px;
-    background: rgba(72, 72, 72, 0.2); }
+    margin-right: 8px;
+    background: rgba(72, 72, 72, 0.2);
+    border-radius: 50%; }
   .live-israel__control--active {
     width: 8px;
     height: 8px;
-    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%); } }
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+    border-radius: 50%; } }
 
 .photo {
   background-color: #ffffff;
@@ -2554,11 +2561,11 @@ a.button:active {
   .photo {
     background-color: #ffffff;
     background-image: url("../img/photo-bg-mobile@1x.png");
-    background-position: 0 62%;
+    background-position: 0 57%;
     background-repeat: no-repeat;
     background-size: 100%; }
   .photo__inner {
-    padding-top: 22.5%;
+    padding-top: 18.5%;
     padding-bottom: 0; }
   .photo__wrapper {
     width: 100%;
@@ -2825,7 +2832,7 @@ a.button:active {
       background-image: url("../img/sketch-city-desktop@2x.png"), url("../img/reviews-bg-desktop@2x.png"); } }
 
 .reviews__inner {
-  padding-top: 22px;
+  padding-top: 19px;
   padding-bottom: 30px; }
 
 .reviews h2 {
@@ -2934,38 +2941,22 @@ a.button:active {
 .reviews__control p {
   margin-right: 23px; }
 
-.reviews__button {
+.reviews__button-left,
+.reviews__button-right {
   cursor: url("../img/pointer-hand.svg"), pointer;
   position: absolute;
-  width: 44px;
-  height: 18px;
-  left: 39.3%;
-  bottom: 70px; }
-
-.reviews__button div {
-  cursor: url("../img/pointer-hand.svg"), pointer;
-  width: 15px;
-  height: 18px;
-  border: none;
-  background: none; }
-
-.reviews__button-left::before,
-.reviews__button-right::before {
-  cursor: url("../img/pointer-hand.svg"), pointer;
-  position: absolute;
-  content: "";
   width: 15px;
   height: 18px; }
 
-.reviews__button-left::before {
-  top: 3px;
-  left: 0;
+.reviews__button-left {
+  left: 39.2%;
+  bottom: 66px;
   background: url("../img/icon-arrow-left.svg");
   background-repeat: no-repeat; }
 
-.reviews__button-right::before {
-  top: 3px;
-  right: 0;
+.reviews__button-right {
+  left: 41.8%;
+  bottom: 66px;
   background: url("../img/icon-arrow-right.svg");
   background-repeat: no-repeat; }
 
@@ -3063,9 +3054,13 @@ a.button:active {
     color: rgba(72, 72, 72, 0.5); }
   .reviews__control p {
     margin-right: 23px; }
-  .reviews__button {
-    left: 53.3%;
-    top: 340px; } }
+  .reviews__button-left,
+  .reviews__button-right {
+    top: 340px; }
+  .reviews__button-left {
+    left: 53.3%; }
+  .reviews__button-right {
+    left: 63.4%; } }
 
 .contacts {
   padding-bottom: 71px;

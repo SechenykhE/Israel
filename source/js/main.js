@@ -171,6 +171,7 @@
   // tabs
 
   var program = document.querySelector('.programs');
+  /* var programsList = program.querySelector('.programs__list');*/
   var programsButtons = program.querySelectorAll('.programs__item');
   var programsTexts = program.querySelectorAll('.programs__text');
 
@@ -188,6 +189,14 @@
     });
   });
 
+  /* programsList.addEventListener('touchend', function () {
+    programsButtons.forEach(function (button, i) {
+      if (button.classList.contains('programs__item--active')) {
+        switchTabs(programsTexts, i, 'programs__text--active');
+      }
+    });
+  }, false);*/
+
   // Swiper
 
   var liveSlider = null;
@@ -199,13 +208,13 @@
       slidesPerView: 1,
       loop: true,
       centerSlides: true,
-      autoplay: {
-        delay: 4000,
-      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        bulletClass: 'live-israel__control',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+        bulletClass: 'live-israel__control--bullet',
         bulletActiveClass: 'live-israel__control--active',
       },
     });
@@ -214,9 +223,11 @@
   var programsSwiper = function () {
     programsSlider = new Swiper('.programs__swiper', {
       direction: 'horizontal',
-      slidesPerView: 3,
+      slidesPerView: 1.6,
+      watchSlidesVisibility: true,
       loop: true,
-      centerSlides: true
+      centerSlides: true,
+      slideActiveClass: 'programs__item--active',
     });
   };
 
@@ -227,12 +238,12 @@
     centerSlides: true,
 
     navigation: {
-      nextEl: '.reviews__button-right',
-      prevEl: '.reviews__button-left',
+      clickable: true,
+      nextEl: 'reviews__button-right',
+      prevEl: 'reviews__button-left',
     },
   });
 
-  reviewsSwiper();
 
   if (window.matchMedia('(max-width: 767px)').matches) {
     liveSwiper();
@@ -270,5 +281,4 @@
   });
 
   window.vendor.svg4everybody();
-  window.vendor.swiper();
 })();

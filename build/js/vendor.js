@@ -14285,4 +14285,3 @@ window.vendor = {
 })));
 //# sourceMappingURL=swiper-bundle.js.map
 
-window.vendor.Swiper = swiper;
