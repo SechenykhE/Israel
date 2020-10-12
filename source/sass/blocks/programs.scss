@@ -334,6 +334,13 @@
   display: block;
 }
 
+@media (max-width: $tablet-width-max) {
+  .programs__inner {
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+}
+
 @media (max-width: $mobile-width-max) {
   .programs {
     background-image: url("../img/programs-bg-mobile@1x.png");
@@ -351,16 +358,17 @@
 
   .programs__inner {
     padding-top: 26px;
-    padding-right: 5%;
+    padding-right: 0;
+    padding-left: 0;
     padding-bottom: 0;
-    padding-left: 5%;
   }
 
   .programs__inner h2 {
     @include title-mobile;
-
+    padding-right: 5%;
+    padding-left: 5%;
     text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: 15px;
   }
 
   .programs__wrapper {
@@ -377,6 +385,8 @@
   .programs__text-wrapper {
     width: 100%;
     padding-top: 34px;
+    padding-right: 5%;
+    padding-left: 5%;
   }
 
   .programs__text-wrapper h3 {
@@ -393,9 +403,14 @@
 
   .programs__item {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
     flex-shrink: 0;
+    flex-grow: 0;
     height: 48px;
+
+    width: auto;
+    padding-right: 12px;
+    opacity: 0.4;
   }
 
   .programs__item--general::before,
@@ -403,11 +418,22 @@
   .programs__item--intern::before,
   .programs__item--volunteer::before,
   .programs__item--religion::before {
-    top: 12px;
-    left: 10px;
+    top: 10px;
+    left: 14px;
     width: 32px;
     height: 32px;
+    background-size: 32px auto;
+
+    opacity: 0.87;
+  }
+
+  .programs__item--general::before {
     background-size: 27px auto;
+  }
+
+  .programs__item:hover,
+  .programs__item:focus {
+    opacity: 1;
   }
 
   .programs__item:hover.programs__item--general::before,
@@ -425,30 +451,43 @@
   .programs__item--active.programs__item--intern::before,
   .programs__item--active.programs__item--volunteer::before,
   .programs__item--active.programs__item--religion::before {
+    background-size: 32px auto;
+
+    opacity: 1;
+  }
+
+  .programs__item--general::before,
+  .programs__item:hover.programs__item--general::before,
+  .programs__item:focus.programs__item--general::before,
+  .programs__item--active.programs__item--general::before {
     background-size: 27px auto;
   }
 
   .programs__list button {
     width: auto;
     height: 48px;
-    padding-left: 52px;
+    padding-left: 53px;
 
     color: rgba($text-color, 0.87);
     text-align: left;
 
     border: none;
     background: none;
+
+    opacity: 0.87;
   }
 
   .programs__item.programs__item--active,
   .programs__item.programs__item--active button {
-    width: 181px;
+    width: auto;
+
+    opacity: 1;
   }
 
   .programs__item--active::after {
     top: 0;
     left: 0;
-    width: 181px;
+    width: 100%;
     height: 48px;
 
     background: $gradient;

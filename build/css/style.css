@@ -1587,6 +1587,11 @@ a.button:active {
 .programs__text--active {
   display: block; }
 
+@media (max-width: 1023px) {
+  .programs__inner {
+    padding-right: 6%;
+    padding-left: 6%; } }
+
 @media (max-width: 767px) {
   .programs {
     background-image: url("../img/programs-bg-mobile@1x.png");
@@ -1603,9 +1608,9 @@ a.button:active {
 @media (max-width: 767px) {
   .programs__inner {
     padding-top: 26px;
-    padding-right: 5%;
-    padding-bottom: 0;
-    padding-left: 5%; }
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0; }
   .programs__inner h2 {
     font-size: 32px;
     line-height: 1.22;
@@ -1614,8 +1619,10 @@ a.button:active {
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #1fc0fc;
+    padding-right: 5%;
+    padding-left: 5%;
     text-align: center;
-    margin-bottom: 13px; }
+    margin-bottom: 15px; }
   .programs__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1635,7 +1642,9 @@ a.button:active {
     width: 100%; }
   .programs__text-wrapper {
     width: 100%;
-    padding-top: 34px; }
+    padding-top: 34px;
+    padding-right: 5%;
+    padding-left: 5%; }
   .programs__text-wrapper h3 {
     font-size: 24px;
     line-height: 1.21;
@@ -1648,20 +1657,32 @@ a.button:active {
     width: 100%; }
   .programs__item {
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
     -ms-flex-negative: 0;
         flex-shrink: 0;
-    height: 48px; }
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    height: 48px;
+    width: auto;
+    padding-right: 12px;
+    opacity: 0.4; }
   .programs__item--general::before,
   .programs__item--academy::before,
   .programs__item--intern::before,
   .programs__item--volunteer::before,
   .programs__item--religion::before {
-    top: 12px;
-    left: 10px;
+    top: 10px;
+    left: 14px;
     width: 32px;
     height: 32px;
+    background-size: 32px auto;
+    opacity: 0.87; }
+  .programs__item--general::before {
     background-size: 27px auto; }
+  .programs__item:hover,
+  .programs__item:focus {
+    opacity: 1; }
   .programs__item:hover.programs__item--general::before,
   .programs__item:focus.programs__item--general::before,
   .programs__item:hover.programs__item--academy::before,
@@ -1677,22 +1698,30 @@ a.button:active {
   .programs__item--active.programs__item--intern::before,
   .programs__item--active.programs__item--volunteer::before,
   .programs__item--active.programs__item--religion::before {
+    background-size: 32px auto;
+    opacity: 1; }
+  .programs__item--general::before,
+  .programs__item:hover.programs__item--general::before,
+  .programs__item:focus.programs__item--general::before,
+  .programs__item--active.programs__item--general::before {
     background-size: 27px auto; }
   .programs__list button {
     width: auto;
     height: 48px;
-    padding-left: 52px;
+    padding-left: 53px;
     color: rgba(72, 72, 72, 0.87);
     text-align: left;
     border: none;
-    background: none; }
+    background: none;
+    opacity: 0.87; }
   .programs__item.programs__item--active,
   .programs__item.programs__item--active button {
-    width: 181px; }
+    width: auto;
+    opacity: 1; }
   .programs__item--active::after {
     top: 0;
     left: 0;
-    width: 181px;
+    width: 100%;
     height: 48px;
     background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     background-repeat: no-repeat;
@@ -2410,6 +2439,7 @@ a.button:active {
     background: none; }
   .live-israel__inner {
     padding-top: 5px;
+    padding-right: 5%;
     padding-bottom: 20px; }
   .live-israel__swiper {
     position: relative;
@@ -2438,6 +2468,9 @@ a.button:active {
     text-align: left; }
   .live-israel__item {
     width: 100%; }
+  .live-israel__item img {
+    margin-right: auto;
+    margin-left: auto; }
   .live-israel__item.live-israel__item--excursion,
   .live-israel__item.live-israel__item--study,
   .live-israel__item.live-israel__item--teach,
@@ -2447,6 +2480,8 @@ a.button:active {
     top: 0;
     left: 0;
     width: 100%; }
+  .live-israel__item.live-israel__item--together {
+    left: -4px; }
   .live-israel__item.live-israel__item--excursion p,
   .live-israel__item.live-israel__item--study p,
   .live-israel__item.live-israel__item--teach p,
@@ -2458,8 +2493,8 @@ a.button:active {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: 4%;
-    width: 85%;
+    bottom: 5%;
+    width: 78%;
     margin-right: auto;
     margin-left: auto;
     text-align: center; }
@@ -2565,7 +2600,7 @@ a.button:active {
     background-repeat: no-repeat;
     background-size: 100%; }
   .photo__inner {
-    padding-top: 18.5%;
+    padding-top: 17.4%;
     padding-bottom: 0; }
   .photo__wrapper {
     width: 100%;
@@ -2923,28 +2958,42 @@ a.button:active {
 
 .reviews__control {
   position: absolute;
+  z-index: 2;
   left: 34.2%;
   bottom: 62px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  width: 36px;
+  height: 26px; }
 
-.reviews__control p,
 .reviews__control span {
-  margin: 0;
-  padding: 0;
   font-size: 17px;
   line-height: 1.5;
   font-weight: 400;
   color: rgba(72, 72, 72, 0.5); }
 
-.reviews__control p {
-  margin-right: 23px; }
+/*.reviews__control {
+  position: absolute;
+  left: 34.2%;
+  bottom: 62px;
 
+  display: flex;
+}
+
+.reviews__control p,
+.reviews__control span {
+  @include reset;
+  @include text(17px, 1.5, 400);
+
+  color: rgba($text-color, 0.5);
+}
+
+.reviews__control p {
+  margin-right: 23px;
+}*/
 .reviews__button-left,
 .reviews__button-right {
   cursor: url("../img/pointer-hand.svg"), pointer;
   position: absolute;
+  z-index: 2;
   width: 15px;
   height: 18px; }
 

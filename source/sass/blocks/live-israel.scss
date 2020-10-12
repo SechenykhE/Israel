@@ -148,6 +148,7 @@
 
   .live-israel__inner {
     padding-top: 5px;
+    padding-right: 5%;
     padding-bottom: 20px;
   }
 
@@ -184,6 +185,11 @@
     width: 100%;
   }
 
+  .live-israel__item img {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .live-israel__item.live-israel__item--excursion,
   .live-israel__item.live-israel__item--study,
   .live-israel__item.live-israel__item--teach,
@@ -195,6 +201,10 @@
     width: 100%;
   }
 
+  .live-israel__item.live-israel__item--together {
+    left: -4px;
+  }
+
   .live-israel__item.live-israel__item--excursion p,
   .live-israel__item.live-israel__item--study p,
   .live-israel__item.live-israel__item--teach p,
@@ -204,8 +214,8 @@
 
     left: 50%;
     transform: translateX(-50%);
-    bottom: 4%;
-    width: 85%;
+    bottom: 5%;
+    width: 78%;
     margin-right: auto;
     margin-left: auto;
     text-align: center;

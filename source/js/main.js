@@ -171,7 +171,7 @@
   // tabs
 
   var program = document.querySelector('.programs');
-  /* var programsList = program.querySelector('.programs__list');*/
+  var programsList = program.querySelector('.programs__list');
   var programsButtons = program.querySelectorAll('.programs__item');
   var programsTexts = program.querySelectorAll('.programs__text');
 
@@ -189,7 +189,8 @@
     });
   });
 
-  /* programsList.addEventListener('touchend', function () {
+
+  /* programsList.addEventListener('change', function () {
     programsButtons.forEach(function (button, i) {
       if (button.classList.contains('programs__item--active')) {
         switchTabs(programsTexts, i, 'programs__text--active');
@@ -207,7 +208,7 @@
       direction: 'horizontal',
       slidesPerView: 1,
       loop: true,
-      centerSlides: true,
+      centeredSlides: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -223,10 +224,9 @@
   var programsSwiper = function () {
     programsSlider = new Swiper('.programs__swiper', {
       direction: 'horizontal',
-      slidesPerView: 1.6,
-      watchSlidesVisibility: true,
+      slidesPerView: 'auto',
       loop: true,
-      centerSlides: true,
+      centeredSlides: true,
       slideActiveClass: 'programs__item--active',
     });
   };
@@ -235,12 +235,19 @@
     direction: 'horizontal',
     slidesPerView: 1,
     loop: true,
-    centerSlides: true,
-
+    centeredSlides: true,
+    pagination: {
+      el: '.reviews__control',
+      type: 'fraction',
+      renderFraction: function (currentClass, totalClass) {
+        return '<span class="' + currentClass + '"></span>' +
+          '<span> / </span>' +
+          '<span class="' + totalClass + '"></span>';
+      }
+    },
     navigation: {
-      clickable: true,
-      nextEl: 'reviews__button-right',
-      prevEl: 'reviews__button-left',
+      nextEl: '.reviews__button-right',
+      prevEl: '.reviews__button-left'
     },
   });
 
@@ -248,6 +255,21 @@
   if (window.matchMedia('(max-width: 767px)').matches) {
     liveSwiper();
     programsSwiper();
+
+    var programsButtonsList = [];
+    programsButtons.forEach(function (button) {
+      programsButtonsList.push(button);
+    });
+
+    programsList.addEventListener('touchend', function () {
+      programsButtons.forEach(function (button) {
+        if (button.classList.contains('programs__item--active')) {
+          var activeButton = programsList.querySelector('.programs__item--active');
+          var j = programsButtonsList.indexOf(activeButton);
+          switchTabs(programsTexts, j, 'programs__text--active');
+        }
+      });
+    }, false);
   }
 
   window.addEventListener('resize', function () {
