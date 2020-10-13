@@ -5665,34 +5665,32 @@ window.vendor = {
   }
 
   function trigger() {
-    var window = getWindow();
-
-    for (var _len9 = arguments.length, args = new Array(_len9), _key9 = 0; _key9 < _len9; _key9++) {
-      args[_key9] = arguments[_key9];
-    }
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
 
     var events = args[0].split(' ');
     var eventData = args[1];
-
     for (var i = 0; i < events.length; i += 1) {
       var event = events[i];
-
       for (var j = 0; j < this.length; j += 1) {
         var el = this[j];
-
-        if (window.CustomEvent) {
-          var evt = new window.CustomEvent(event, {
+        var evt = (void 0);
+        try {
+          evt = new win.CustomEvent(event, {
             detail: eventData,
             bubbles: true,
-            cancelable: true
+            cancelable: true,
           });
-          el.dom7EventData = args.filter(function (data, dataIndex) {
-            return dataIndex > 0;
-          });
-          el.dispatchEvent(evt);
-          el.dom7EventData = [];
-          delete el.dom7EventData;
+        } catch (e) {
+          evt = doc.createEvent('Event');
+          evt.initEvent(event, true, true);
+          evt.detail = eventData;
         }
+        // eslint-disable-next-line
+        el.dom7EventData = args.filter(function (data, dataIndex) { return dataIndex > 0; });
+        el.dispatchEvent(evt);
+        el.dom7EventData = [];
+        delete el.dom7EventData;
       }
     }
 
@@ -6714,8 +6712,8 @@ window.vendor = {
 
     width = width - parseInt($el.css('padding-left') || 0, 10) - parseInt($el.css('padding-right') || 0, 10);
     height = height - parseInt($el.css('padding-top') || 0, 10) - parseInt($el.css('padding-bottom') || 0, 10);
-    if (Number.isNaN(width)) width = 0;
-    if (Number.isNaN(height)) height = 0;
+    if (isNaN(width)) width = 0;
+    if (isNaN(height)) height = 0;
     extend$1(swiper, {
       width: width,
       height: height,

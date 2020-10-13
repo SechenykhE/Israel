@@ -2511,7 +2511,8 @@ a.button:active {
             justify-content: center; }
   .live-israel__swiper > .live-israel__control {
     bottom: 2px;
-    left: 4px; }
+    left: 4px;
+    width: 100%; }
   .live-israel__control--bullet {
     display: block;
     width: 6px;
@@ -2970,25 +2971,6 @@ a.button:active {
   font-weight: 400;
   color: rgba(72, 72, 72, 0.5); }
 
-/*.reviews__control {
-  position: absolute;
-  left: 34.2%;
-  bottom: 62px;
-
-  display: flex;
-}
-
-.reviews__control p,
-.reviews__control span {
-  @include reset;
-  @include text(17px, 1.5, 400);
-
-  color: rgba($text-color, 0.5);
-}
-
-.reviews__control p {
-  margin-right: 23px;
-}*/
 .reviews__button-left,
 .reviews__button-right {
   cursor: url("../img/pointer-hand.svg"), pointer;

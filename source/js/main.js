@@ -251,7 +251,6 @@
     },
   });
 
-
   if (window.matchMedia('(max-width: 767px)').matches) {
     liveSwiper();
     programsSwiper();
@@ -303,4 +302,5 @@
   });
 
   window.vendor.svg4everybody();
+  window.vendor.swiper();
 })();
